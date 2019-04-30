@@ -1,0 +1,7 @@
+# Es wird nach dem Feld mit der entsprechenden Position gesucht und dann wird dessen Wert in eine Variable gespeichert und anschließend in einer tellraw-Nachricht ausgegeben
+execute as @e[type=minecraft:armor_stand,name=ObjFeld.p1FeldDimension1,tag=EtiFeld.p1AlleFelder] if score @s PZFeld.p1Pos = #VarFeld.p1PositionAusgebenDimension1 PZFeld.p1Pos at @s align xyz positioned ~-0.2 ~-0.2 ~-0.2 as @e[dx=64,dy=0.4,dz=0.4,type=minecraft:armor_stand,tag=EtiFeld.p1AlleFelder,name=ObjFeld.p1Inhalt] if score @s PZFeld.p1Pos = #VarFeld.p1PositionAusgebenDimension2 PZFeld.p1Pos at @s run scoreboard players operation #VarFeld.p1WertInhalt PZFeld.p1Wert = @s PZFeld.p1Wert
+execute at @s run tellraw @a[distance=..25] ["",{"text":"Feld[","bold":true},{"score":{"name":"#VarFeld.p1PositionAusgebenDimension1","objective":"PZFeld.p1Pos"},"bold":true,"color":"green"},{"text":"][","bold":true},{"score":{"name":"#VarFeld.p1PositionAusgebenDimension2","objective":"PZFeld.p1Pos"},"bold":true,"color":"red"},{"text":"] = ","bold":true},{"score":{"name":"#VarFeld.p1WertInhalt","objective":"PZFeld.p1Wert"},"bold":true,"color":"dark_purple"} ]
+
+# Die Position wird um eins erhöht und wenn sie kleiner gleich der maximalen Länge des Feldes ist, wird diese Funktion selbst nochmal mit der neuen Position aufgerufen
+scoreboard players add #VarFeld.p1PositionAusgebenDimension2 PZFeld.p1Pos 1
+execute if score #VarFeld.p1PositionAusgebenDimension2 PZFeld.p1Pos <= #VarFeld.p1Dimension2 PZFeld.p1Felder run function direktzugriffsspeicher:vp1menu_werte_dimension_2

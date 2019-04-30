@@ -1,0 +1,19 @@
+{
+  "values": [
+    "minecraft:white_stained_glass_pane",
+    "minecraft:red_sandstone_stairs",
+    "minecraft:quartz_stairs",
+    "minecraft:quartz_slab",
+    "minecraft:stone_brick_slab",
+    "minecraft:dark_oak_stairs",
+    "minecraft:polished_andesite",
+    "minecraft:orange_terracotta",
+    "minecraft:blue_terracotta",
+    "minecraft:gray_terracotta",
+    "minecraft:black_concrete",
+    "minecraft:redstone_block",
+    "minecraft:structure_block",
+    "minecraft:oak_fence",
+    "minecraft:glass"
+  ]
+}

@@ -1,0 +1,4 @@
+
+scoreboard objectives add PZKaefigZ.4Zeit dummy ["Käfigzone.4: ",{"text":"Zeit der Gefangenschaft"}]
+summon minecraft:item ~ ~10 ~ {Item:{id:"minecraft:barrier",Count:1b},Age:6000s,Tags:["EtiKaefigZ.4Alle"],Passengers:[{id:"minecraft:armor_stand",Small:true,Marker:true,Tags:["EtiKaefigZ.4Alle","EtiKaefigZ.4Zone"],ArmorItems:[{},{},{},{id:"minecraft:barrier",Count:1b} ] },{id:"minecraft:armor_stand",Small:true,Marker:true,Tags:["EtiKaefigZ.4Alle","EtiKaefigZ.4Zone"],ArmorItems:[{},{},{},{id:"minecraft:barrier",Count:1b} ] },{id:"minecraft:armor_stand",Small:true,Marker:true,Tags:["EtiKaefigZ.4Alle","EtiKaefigZ.4Zone"],ArmorItems:[{},{},{},{id:"minecraft:barrier",Count:1b} ] } ] }
+execute at @e[type=minecraft:item,tag=EtiKaefigZ.4Alle] run spreadplayers ~ ~ 24 25 false @e[type=minecraft:armor_stand,tag=EtiKaefigZ.4Alle]
