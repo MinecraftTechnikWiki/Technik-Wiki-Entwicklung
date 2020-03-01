@@ -7,7 +7,7 @@ execute if score VarSchMS.1Rotation PZSchMS.1Brett matches 2 run summon minecraf
 
 execute if score VarSchMS.1Rotation PZSchMS.1Brett matches 3 run summon minecraft:skeleton ~ ~ ~ {NoAI:true,Silent:true,DeathLootTable:"minecraft:empty",Rotation:[270.0f,0.0f],Tags:["EtiSchMS.1Alle","EtiSchMS.1Figur","EtiSchMS.1Farbe","EtiSchMS.1Laeufer","EtiSchMS.1FigurBoden"],Passengers:[{id:"minecraft:zombie",IsBaby:true,Silent:true,NoAI:true,DeathLootTable:"minecraft:empty",Rotation:[270.0f,0.0f],Tags:["EtiSchMS.1Alle","EtiSchMS.1Figur","EtiSchMS.1Anklickbar","EtiSchMS.1Farbe","EtiSchMS.1Laeufer"]}]}
 
-execute as @e[tag=EtiSchMS.1Farbe,sort=nearest,limit=2] run data merge entity @s {HandItems:[{},{id:"minecraft:bow",Count:1b}],ArmorItems:[{},{id:"minecraft:leather_leggings",Count:1b,tag:{Unbreakable:true,display:{color:16383998}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{Unbreakable:true,display:{color:16383998}}},{id:"minecraft:leather_helmet",Count:1b,tag:{Unbreakable:true,display:{color:16383998}}}]}
+execute as @e[tag=EtiSchMS.1Farbe,sort=nearest,limit=2] run data merge entity @s {CustomNameVisible:true,CustomName:'{"text":"♗","bold":true}',HandItems:[{},{id:"minecraft:bow",Count:1b}],ArmorItems:[{},{id:"minecraft:leather_leggings",Count:1b,tag:{Unbreakable:true,display:{color:16383998}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{Unbreakable:true,display:{color:16383998}}},{id:"minecraft:leather_helmet",Count:1b,tag:{Unbreakable:true,display:{color:16383998}}}]}
 
 scoreboard players operation @e[distance=..3,tag=EtiSchMS.1Farbe,sort=nearest,limit=2] PZSchMS.1Farbe = VarSchMS.1Farbe PZSchMS.1Farbe
 

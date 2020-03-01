@@ -1,8 +1,10 @@
-
+# Die beiden Punktestand-Ziele werden entfernt.
 scoreboard objectives remove PZWegFS.1Wert
 scoreboard objectives remove PZWegFS.1Vergl
 
-tag @e[type=minecraft:item,nbt={Item:{tag:{display:{Lore:["Wegfindungssystem.1"]}}}}] add EtiWegFS.1Alle
-kill @e[tag=EtiWegFS.1Alle]
+# Die Rüstungsständer werden aus dem Inventar wieder gelöscht.
+clear @a minecraft:armor_stand{wegfindungssystem:"v1gegenstand"}
 
-clear @a[distance=..25] minecraft:armor_stand{display:{Lore:["Wegfindungssystem.1"]}}
+# Falls die Rüstungsständer auf den Boden gedroppt wurden erhalten sie ein Etikett. Alle Objekte mit dem Etikett werden gelöscht.
+tag @e[type=minecraft:item,nbt={Item:{tag:{wegfindungssystem:"v1gegenstand"} } }] add EtiWegFS.1Alle
+kill @e[tag=EtiWegFS.1Alle]

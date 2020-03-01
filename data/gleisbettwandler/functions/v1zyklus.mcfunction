@@ -7,6 +7,8 @@ tag @e[type=minecraft:armor_stand,tag=EtiGlBW.1Erstellen] remove EtiGlBW.1Erstel
 
 execute as @e[type=minecraft:armor_stand,tag=EtiGlBW.1Wandler] at @s if entity @p[distance=..10] rotated ~ 0 run teleport @s ~ ~ ~ facing entity @p[distance=..10] feet
 
-execute as @e[type=minecraft:armor_stand,tag=EtiGlBW.1Wandler] at @s if entity @p[distance=..10,scores={PZGlBW.1Schl=3..},nbt={OnGround:true}] rotated ~180 0 run function gleisbettwandler:v1gleisbett
+execute at @e[type=minecraft:area_effect_cloud,tag=EtiGlBW.1Alle] unless block ~ ~-0.5 ~ minecraft:air as @e[type=minecraft:armor_stand,tag=EtiGlBW.1Wandler] at @s if entity @p[distance=..10,scores={PZGlBW.1Schl=3..},nbt={OnGround:true}] rotated ~180 0 run function gleisbettwandler:v1gleisbett
+
+execute at @e[type=minecraft:area_effect_cloud,tag=EtiGlBW.1Alle] if block ~ ~-0.5 ~ minecraft:air run tellraw @a[scores={PZGlBW.1Schl=3..},nbt={OnGround:true}] ["Gleisbettwandler.1: ",{"text":"Es wurde kein Block auf den Konstruktionsblock gesetzt um das Gleisbett festzulegen!","color":"red","bold":true}]
 
 scoreboard players reset @a[scores={PZGlBW.1Schl=3..}] PZGlBW.1Schl

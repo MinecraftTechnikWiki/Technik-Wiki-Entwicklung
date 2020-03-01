@@ -1,5 +1,5 @@
 
-tag @e[type=minecraft:item,nbt={Item:{tag:{display:{Lore:["Sperrzone.3"]} } } }] add EtiSperrZ.3Alle
+tag @e[type=minecraft:item,nbt={Item:{tag:{EigSperrZ.3Gegenstand:true} } }] add EtiSperrZ.3Alle
 kill @e[tag=EtiSperrZ.3Alle]
-clear @a[distance=..50] minecraft:name_tag{display:{Lore:["Sperrzone.3"]} }
+clear @a[distance=..50] minecraft:name_tag{EigSperrZ.3Gegenstand:true}
 setblock ~-4 ~ ~ minecraft:air replace

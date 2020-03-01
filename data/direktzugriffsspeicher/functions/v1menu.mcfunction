@@ -1,5 +1,5 @@
 # Wenn der Spieler Gegenstände im Inventar hat, die vom Menü der Güterlore stammen, werden sie entfernt
-execute at @s run clear @a[distance=..10] #direktzugriffsspeicher:v1menu_gegenstand{display:{Lore:["Klicke auf den Gegenstand"]} } 64
+execute at @s run clear @a[distance=..10] #direktzugriffsspeicher:v1menu_gegenstand{display:{Lore:['"Klicke auf den Gegenstand"']} } 64
 
 # Wenn der Gegenstand für das Neuerzeugen aller Felder angeklickt wurde, wird die Felder-Erzeugen-Funktion geladen
 execute as @s[nbt=!{Items:[{Slot:11b}]}] run function direktzugriffsspeicher:v1menu_felder_erzeugen

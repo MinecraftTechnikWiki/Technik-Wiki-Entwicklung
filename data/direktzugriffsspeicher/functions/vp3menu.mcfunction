@@ -1,5 +1,5 @@
 # Wenn der Spieler Gegenstände im Inventar hat, die vom Menü der Güterlore stammen, werden sie entfernt
-execute at @s run clear @a[distance=..10] #direktzugriffsspeicher:vp3menu{display:{Lore:["Klicke auf den Gegenstand"]} } 64
+execute at @s run clear @a[distance=..10] #direktzugriffsspeicher:vp3menu{display:{Lore:['"Klicke auf den Gegenstand"']} } 64
 
 # Wenn der Gegenstand für das Neuerzeugen aller Felder angeklickt wurde, wird die Felder-Erzeugen-Funktion geladen
 execute as @s[nbt=!{Items:[{Slot:11b}]}] run function direktzugriffsspeicher:vp3menu_dimensionen_erzeugen

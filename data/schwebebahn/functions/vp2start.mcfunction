@@ -1,9 +1,8 @@
 
-scoreboard objectives add PZSchwB.p2Nr minecraft.custom:minecraft.sneak_time ["Schwebebahn.plus.2: ",{"text":"Blocknummer","bold":true}]
+scoreboard objectives add PZSchwB.p2Ausl trigger ["Schwebebahn.erweitert.2: ",{"text":"Auslöser für Optionen","bold":true}]
 
-summon minecraft:armor_stand ~3 ~ ~5 {NoGravity:true,Invisible:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Ertaster","EtiSchwB.p2Tester"]}
-summon minecraft:armor_stand ~3 ~6.8 ~-13 {NoGravity:true,Invisible:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Ertaster","EtiSchwB.p2Block","EtiSchwB.p2Setzer"]}
-summon minecraft:armor_stand ~47 ~ ~2 {NoGravity:true,Invisible:true,CustomNameVisible:true,CustomName:"{\"text\":\"Reihe\"}",Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Reihe"],ArmorItems:[{},{},{},{id:"minecraft:diamond_block",Count:1b}]}
-summon minecraft:armor_stand ~47 ~7.2 ~-16 {NoGravity:true,Invisible:true,CustomNameVisible:true,CustomName:"{\"text\":\"Reihe\"}",Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Block","EtiSchwB.p2Reihe"],ArmorItems:[{},{},{},{id:"minecraft:diamond_block",Count:1b}]}
-summon minecraft:armor_stand ~47 ~ ~1 {NoGravity:true,Invisible:true,CustomNameVisible:true,CustomName:"{\"text\":\"Spalte\"}",Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Spalte"],ArmorItems:[{},{},{},{id:"minecraft:emerald_block",Count:1b}]}
-summon minecraft:armor_stand ~47 ~7.2 ~-17 {NoGravity:true,Invisible:true,CustomNameVisible:true,CustomName:"{\"text\":\"Spalte\"}",Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Block","EtiSchwB.p2Spalte"],ArmorItems:[{},{},{},{id:"minecraft:emerald_block",Count:1b}]}
+give @a[distance=..15] minecraft:armor_stand{schwebebahn:"vp2gegenstand",display:{Name:'{"text":"Hyperloop","color":"gold"}',Lore:['"Platziere den Rüstungsständer"','"auf eine Hyperloop-Strecke"','"um eine Hyperloop"','"zu erstellen"'] },EntityTag:{Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Erstellen"] } }
+
+give @a[distance=..15] minecraft:armor_stand{schwebebahn:"vp2gegenstand",display:{Name:'{"text":"Hyperloop-Strecke"}',Lore:['"Platziere den Rüstungsständer"','"um eine Hyperloop-Strecke"','"zu erstellen"'] },EntityTag:{Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Strecke"] } }
+
+tellraw @a[distance=..15] ["Schwebebahn.erweitert.2: ",{"text":"Drücke E um das Inventar zu öffnen und fahre mit der Maus über die Rüstungsständer, um zu erfahren wie man sie einsetzt um die Hyperloop zu benutzen.","bold":true}]

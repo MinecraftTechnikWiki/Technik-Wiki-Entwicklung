@@ -1,18 +1,23 @@
 
-execute if entity @s[y_rotation=135..-135,tag=EtiSchwB.1ZugEnde] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=north] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-1,posY:0,posZ:2,rotation:"COUNTERCLOCKWISE_90",name:"schwebebahn:v1waggon-ende"}
-execute if entity @s[y_rotation=-135..-45,tag=EtiSchwB.1ZugEnde] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=east] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-2,posY:0,posZ:-1,rotation:"NONE",name:"schwebebahn:v1waggon-ende"}
-execute if entity @s[y_rotation=-45..45,tag=EtiSchwB.1ZugEnde] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=south] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:1,posY:0,posZ:-2,rotation:"CLOCKWISE_90",name:"schwebebahn:v1waggon-ende"}
-execute if entity @s[y_rotation=45..135,tag=EtiSchwB.1ZugEnde] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=west] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:2,posY:0,posZ:1,rotation:"CLOCKWISE_180",name:"schwebebahn:v1waggon-ende"}
+execute if entity @s[y_rotation=135..-135] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=north] run scoreboard players set @s PZSchwB.1Schl 1
+execute if entity @s[y_rotation=-135..-45] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=east] run scoreboard players set @s PZSchwB.1Schl 2
+execute if entity @s[y_rotation=-45..45] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=south] run scoreboard players set @s PZSchwB.1Schl 3
+execute if entity @s[y_rotation=45..135] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=west] run scoreboard players set @s PZSchwB.1Schl 4
 
-execute if entity @s[y_rotation=135..-135,tag=EtiSchwB.1ZugMitte] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=north] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-1,posY:0,posZ:1,rotation:"COUNTERCLOCKWISE_90",name:"schwebebahn:v1waggon-gelenk"}
-execute if entity @s[y_rotation=-135..-45,tag=EtiSchwB.1ZugMitte] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=east] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-1,posY:0,posZ:-1,rotation:"NONE",name:"schwebebahn:v1waggon-gelenk"}
-execute if entity @s[y_rotation=-45..45,tag=EtiSchwB.1ZugMitte] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=south] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:1,posY:0,posZ:-1,rotation:"CLOCKWISE_90",name:"schwebebahn:v1waggon-gelenk"}
-execute if entity @s[y_rotation=45..135,tag=EtiSchwB.1ZugMitte] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=west] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:1,posY:0,posZ:1,rotation:"CLOCKWISE_180",name:"schwebebahn:v1waggon-gelenk"}
+execute if entity @s[tag=EtiSchwB.1ZugEnde,scores={PZSchwB.1Schl=1}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-1,posY:0,posZ:2,rotation:"COUNTERCLOCKWISE_90",name:"schwebebahn:v1schwebebahn"} replace
+execute if entity @s[tag=EtiSchwB.1ZugEnde,scores={PZSchwB.1Schl=2}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-2,posY:0,posZ:-1,rotation:"NONE",name:"schwebebahn:v1schwebebahn"} replace
+execute if entity @s[tag=EtiSchwB.1ZugEnde,scores={PZSchwB.1Schl=3}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:1,posY:0,posZ:-2,rotation:"CLOCKWISE_90",name:"schwebebahn:v1schwebebahn"} replace
+execute if entity @s[tag=EtiSchwB.1ZugEnde,scores={PZSchwB.1Schl=4}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:2,posY:0,posZ:1,rotation:"CLOCKWISE_180",name:"schwebebahn:v1schwebebahn"} replace
 
-execute if entity @s[y_rotation=135..-135,tag=EtiSchwB.1ZugAnfang] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=north] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-1,posY:0,posZ:1,rotation:"COUNTERCLOCKWISE_90",name:"schwebebahn:v1waggon-anfang"}
-execute if entity @s[y_rotation=-135..-45,tag=EtiSchwB.1ZugAnfang] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=east] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-1,posY:0,posZ:-1,rotation:"NONE",name:"schwebebahn:v1waggon-anfang"}
-execute if entity @s[y_rotation=-45..45,tag=EtiSchwB.1ZugAnfang] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=south] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:1,posY:0,posZ:-1,rotation:"CLOCKWISE_90",name:"schwebebahn:v1waggon-anfang"}
-execute if entity @s[y_rotation=45..135,tag=EtiSchwB.1ZugAnfang] if block ~ ~5 ~ minecraft:magenta_glazed_terracotta[facing=west] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:1,posY:0,posZ:1,rotation:"CLOCKWISE_180",name:"schwebebahn:v1waggon-anfang"}
+execute if entity @s[tag=EtiSchwB.1ZugMitte,scores={PZSchwB.1Schl=1}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-1,posY:0,posZ:1,rotation:"COUNTERCLOCKWISE_90",name:"schwebebahn:v1schwebebahn_gelenk"} replace
+execute if entity @s[tag=EtiSchwB.1ZugMitte,scores={PZSchwB.1Schl=2}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-1,posY:0,posZ:-1,rotation:"NONE",name:"schwebebahn:v1schwebebahn_gelenk"} replace
+execute if entity @s[tag=EtiSchwB.1ZugMitte,scores={PZSchwB.1Schl=3}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:1,posY:0,posZ:-1,rotation:"CLOCKWISE_90",name:"schwebebahn:v1schwebebahn_gelenk"} replace
+execute if entity @s[tag=EtiSchwB.1ZugMitte,scores={PZSchwB.1Schl=4}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:1,posY:0,posZ:1,rotation:"CLOCKWISE_180",name:"schwebebahn:v1schwebebahn_gelenk"} replace
+
+execute if entity @s[tag=EtiSchwB.1ZugAnfang,scores={PZSchwB.1Schl=1}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-1,posY:0,posZ:-20,rotation:"COUNTERCLOCKWISE_90",mirror:"FRONT_BACK",name:"schwebebahn:v1schwebebahn"} replace
+execute if entity @s[tag=EtiSchwB.1ZugAnfang,scores={PZSchwB.1Schl=2}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:20,posY:0,posZ:-1,rotation:"NONE",mirror:"FRONT_BACK",name:"schwebebahn:v1schwebebahn"} replace
+execute if entity @s[tag=EtiSchwB.1ZugAnfang,scores={PZSchwB.1Schl=3}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:1,posY:0,posZ:20,rotation:"CLOCKWISE_90",mirror:"FRONT_BACK",name:"schwebebahn:v1schwebebahn"} replace
+execute if entity @s[tag=EtiSchwB.1ZugAnfang,scores={PZSchwB.1Schl=4}] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-20,posY:0,posZ:1,rotation:"CLOCKWISE_180",mirror:"FRONT_BACK",name:"schwebebahn:v1schwebebahn"} replace
 
 execute if block ~ ~ ~ minecraft:structure_block run setblock ~ ~1 ~ minecraft:redstone_block replace
 

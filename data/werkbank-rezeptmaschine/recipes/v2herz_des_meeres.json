@@ -1,0 +1,23 @@
+{
+  "type":"crafting_shaped",
+  "pattern":[
+    "pnp",
+    "ntn",
+    "pnp"
+  ],
+  "key":{
+    "n":{
+      "item":"minecraft:nautilus_shell"
+    },
+    "p":{
+      "item":"minecraft:prismarine_crystals"
+    },
+    "t":{
+      "item":"minecraft:turtle_egg"
+    }
+  },
+  "result":{
+    "item":"minecraft:heart_of_the_sea",
+    "count":1
+  }
+}

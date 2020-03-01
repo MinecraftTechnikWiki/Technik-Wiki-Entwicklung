@@ -4,7 +4,7 @@ execute as @s[tag=EtiFeld.1PositionAufsteigen] if score #VarFeld.1AktuellePositi
 execute at @s[tag=EtiFeld.1PositionAufsteigen] run tellraw @a[distance=..25] ["Direktzugriffsspeicher.1:\n",{"text":"Feld.Position + 1 = ","bold":true},{"score":{"name":"#VarFeld.1AktuellePosition","objective":"PZFeld.1Pos"},"bold":true,"color":"green"} ]
 
 # Gibt die aktuelle Position aus
-execute at @s[tag=EtiFeld.1PositionAusgeben] run tellraw @a[distance=..25] ["Direktzugriffsspeicher.1:\n",{"text":"Feld.Position = ","bold":true},{"score":{"name":"#VarFeld.1AktuellePosition","objective":"PZFeld.1Pos"},"bold":true,"color":"green"} ]
+execute at @s[tag=EtiFeld.1PositionAusgeben] run tellraw @a[distance=..25] ["Direktzugriffsspeicher.1:\n",{"text":"Feld.Position == ","bold":true},{"score":{"name":"#VarFeld.1AktuellePosition","objective":"PZFeld.1Pos"},"bold":true,"color":"green"} ]
 
 # Gibt die neue verringerte Position aus
 execute as @s[tag=EtiFeld.1PositionAbsteigen] run scoreboard players remove #VarFeld.1AktuellePosition PZFeld.1Pos 1

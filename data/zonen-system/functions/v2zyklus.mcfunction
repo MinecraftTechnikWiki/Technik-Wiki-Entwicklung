@@ -1,10 +1,8 @@
 # Wenn der Spieler keine Nummer hat, wir die Funktion aufgerufen
-#execute if entity @s[tag=!EtiZone.2SpielerNummer] run function zonen-system:v2schritt1
+#execute if entity @s[tag=!EtiZone.2SpielerNummer] run function zonen-system:v2nummer
 
 # Hat der Spieler eine Truhe geworfen, wird die Funktion dafür geladen
-#execute if entity @s[scores={PZZone.2Truhe=1..}] run function zonen-system:v2schritt2
-
-
+#execute if entity @s[scores={PZZone.2Truhe=1..}] run function zonen-system:v2optionen
 
 #scoreboard objectives add change dummy
 #scoreboard objectives add copy dummy
@@ -19,19 +17,11 @@ execute as @p at @s store result score @p change run data get entity @e[tag=anch
 
 execute as @p unless score @s copy = @s change run tag @s remove plot
 
-
 execute as @p at @s at @e[sort=nearest,limit=1,tag=anchor] positioned ~-5 ~-5 ~-5 run tellraw @s[tag=!plot,dx=10,dy=10,dz=10] "drinnen"
 execute as @p at @s at @e[sort=nearest,limit=1,tag=anchor] positioned ~-5 ~-5 ~-5 run tag @s[tag=!plot,dx=10,dy=10,dz=10] add plot
 
 execute as @p at @s at @e[sort=nearest,limit=1,tag=anchor] positioned ~-5 ~-5 ~-5 unless entity @s[dx=10,dy=10,dz=10] run tellraw @s[tag=plot] "draußen"
 execute as @p at @s at @e[sort=nearest,limit=1,tag=anchor] positioned ~-5 ~-5 ~-5 unless entity @s[dx=10,dy=10,dz=10] run tag @s[tag=plot] remove plot
-
-
-
-
-
-
-
 
 execute as @a[distance=..25] run scoreboard players operation @s PZMsRad.1Vergl = @s PZMsRad.1Slot
 execute as @a[distance=..25] store result score @s PZMsRad.1Slot run data get entity @s SelectedItemSlot

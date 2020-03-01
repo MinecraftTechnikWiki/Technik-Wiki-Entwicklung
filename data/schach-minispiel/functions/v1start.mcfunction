@@ -14,4 +14,4 @@ scoreboard players set VarSchMS.1VierSchach PZSchMS.1Brett 0
 
 difficulty easy
 
-give @p[distance=..15] minecraft:armor_stand{display:{Lore:["Schach-Minispiel.1","Platziere den Rüstungsständer","um ein Schachfeld zu","erzeugen"]},EntityTag:{Marker:true,Tags:["EtiSchMS.1Alle","EtiSchMS.1SchachbrettErstellen"]}}
+give @p[distance=..15] minecraft:armor_stand{schach-minispiel:"v1gegenstand",display:{Lore:['"Platziere den Rüstungsständer"','"um ein Schachfeld zu"','"erzeugen"']},EntityTag:{Marker:true,Tags:["EtiSchMS.1Alle","EtiSchMS.1SchachbrettErstellen"]}}

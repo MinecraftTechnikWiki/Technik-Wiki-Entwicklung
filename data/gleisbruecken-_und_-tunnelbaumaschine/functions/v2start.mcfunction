@@ -1,0 +1,4 @@
+# Dem Spieler werden drei Rüstungsständer gegeben die bestimmte Brückenbauteile erzeugen
+give @a[distance=..25] minecraft:armor_stand{gleisbruecken-_und_-tunnelbaumaschine:"v2gegenstand",display:{Name:'{"text":"Brückenstrecke"}',Lore:['"Platziere den Rüstungsständer"']},EntityTag:{Tags:["EtiGBuTB.2Alle","EtiGBuTB.2Bauwerk","EtiGBuTB.2Brueckenstrecke"]} } 1
+give @a[distance=..25] minecraft:armor_stand{gleisbruecken-_und_-tunnelbaumaschine:"v2gegenstand",display:{Name:'{"text":"Pfeilersockel"}',Lore:['"Platziere den Rüstungsständer"']},EntityTag:{Tags:["EtiGBuTB.2Alle","EtiGBuTB.2Bauwerk","EtiGBuTB.2Pfeilersockel"]} } 1
+give @a[distance=..25] minecraft:armor_stand{gleisbruecken-_und_-tunnelbaumaschine:"v2gegenstand",display:{Name:'{"text":"Pfeiler"}',Lore:['"Platziere den Rüstungsständer"']},EntityTag:{Tags:["EtiGBuTB.2Alle","EtiGBuTB.2Bauwerk","EtiGBuTB.2Pfeiler"]} } 1
