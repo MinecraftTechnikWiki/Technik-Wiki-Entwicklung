@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:lever",
+    "minecraft:tripwire_hook",
+    "#minecraft:buttons",
+    "#minecraft:wooden_pressure_plates",
+    "minecraft:ladder"
+  ]
+}

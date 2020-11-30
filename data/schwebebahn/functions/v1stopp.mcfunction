@@ -3,7 +3,7 @@ scoreboard objectives remove PZSchwB.1Schl
 
 execute at @e[tag=EtiSchwB.1Schwebebahn] run fill ^1 ^ ^-1 ^-3 ^7 ^20 minecraft:air replace #schwebebahn:v1schwebebahn_bloecke
 
-clear @a minecraft:armor_stand{schwebebahn:"v1gegenstand"}
+clear @a minecraft:armor_stand{EigSchwB.1Alle:true}
 
-tag @e[type=minecraft:item,nbt={Item:{tag:{schwebebahn:"v1gegenstand"} } }] add EtiSchwB.1Alle
+tag @e[type=minecraft:item,nbt={Item:{tag:{EigSchwB.1Alle:true} } }] add EtiSchwB.1Alle
 kill @e[tag=EtiSchwB.1Alle]

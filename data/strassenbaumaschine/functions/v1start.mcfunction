@@ -18,3 +18,6 @@ give @a[distance=..15] minecraft:gray_concrete{strassenbaumaschine:"v1gegenstand
 give @a[distance=..15] minecraft:smooth_quartz{strassenbaumaschine:"v1gegenstand"} 128
 
 tellraw @a[distance=..15] ["Straßenbaumaschine.1: ",{"text":"Wirf die Gegenstände auf den Boden um eine Straßenbaumaschine in Form eines Rüstungsständers zu erhalten. Den Rüstungsständer muss man platzieren und anschließend kann der Brennstoff durch das Auswählen von Kohle in der Schnelleiste und das Drücken von Shift aufgetankt werden. Ist die Straßenbaumaschine mit genug Brennstoff versorgt, wählt man das Schwert aus und Drückt ebenfalls Shift um die Länge der Straßenstrecke zu bestimmen.","bold":true}]
+
+# Der Chunk wird aktiviert.
+forceload add ~ ~

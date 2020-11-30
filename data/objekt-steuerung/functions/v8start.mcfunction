@@ -1,3 +1,0 @@
-# Einen Block über der Befehlsquelle wird ein Rüstungsständer, der das Zentrum markiert schwebend platziert. Spieler erhalten 16 Rüstungsständer, die man beliebig platzieren kann, damit diese dann sich an den Mittelpunkt einfinden und sich um diesen bewegen
-summon minecraft:armor_stand ~ ~1 ~ {Small:true,NoGravity:true,CustomNameVisible:true,CustomName:'{"text":"Mittelpunkt","bold":true}',Tags:["EtiObjSt.8Alle","EtiObjSt.8Mittelpunkt"]}
-give @a[distance=..15] minecraft:armor_stand{objekt-steuerung:"v8gegenstand",display:{Lore:['"Platziere diesen Rüstungsständer"','"damit er als Begleiter um den"','"Mittelpunkt drehen kann"']},EntityTag:{Small:true,NoGravity:true,Tags:["EtiObjSt.8Alle","EtiObjSt.8Begleiter"]} } 16

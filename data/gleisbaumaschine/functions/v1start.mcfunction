@@ -1,3 +1,0 @@
-# Dem Spieler werden zwei Rüstungsständer gegeben die bestimmte Gleisstrecken erzeugen
-give @a[distance=..25] minecraft:armor_stand{gleisbaumaschine:"v1gegenstand",display:{Name:'{"text":"Gleisstrecke"}',Lore:['"Platziere den Rüstungsständer"','"um die Gleisstrecke zu erstellen"']},EntityTag:{Tags:["EtiGleisB.1Alle","EtiGleisB.1Bauwerk","EtiGleisB.1Gleisstrecke"]} } 1
-give @a[distance=..25] minecraft:armor_stand{gleisbaumaschine:"v1gegenstand",display:{Name:'{"text":"Gleiskurve"}',Lore:['"Platziere den Rüstungsständer"','"um die Gleiskurve zu erstellen"']},EntityTag:{Tags:["EtiGleisB.1Alle","EtiGleisB.1Bauwerk","EtiGleisB.1Gleiskurve"]} } 1

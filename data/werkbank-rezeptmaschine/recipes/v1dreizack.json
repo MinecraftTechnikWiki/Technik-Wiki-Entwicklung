@@ -1,0 +1,23 @@
+{
+  "type":"crafting_shaped",
+  "pattern":[
+    "qi ",
+    "ip ",
+    "  p"
+  ],
+  "key":{
+    "q":{
+      "item":"minecraft:quartz"
+    },
+    "i":{
+      "item":"minecraft:iron_ingot"
+    },
+    "p":{
+      "item":"minecraft:prismarine_shard"
+    }
+  },
+  "result":{
+    "item":"minecraft:trident",
+    "count":1
+  }
+}

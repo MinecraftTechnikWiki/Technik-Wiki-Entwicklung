@@ -1,18 +1,29 @@
 
-execute at @e[type=minecraft:armor_stand,name=Werkbankhausen] positioned ~-7 ~ ~-7 run tag @a[dx=15,dy=15,dz=15,tag=EtiZonMa.3ErstbetrittWerkbankhausen,scores={PZZonMa.3Betritt=1..}] remove EtiZonMa.3ErstbetrittWerkbankhausen
-execute at @e[type=minecraft:armor_stand,name=Braustandhausen] positioned ~-7 ~ ~-7 run tag @a[dx=15,dy=15,dz=15,tag=EtiZonMa.3ErstbetrittBraustandhausen,scores={PZZonMa.3Betritt=1..}] remove EtiZonMa.3ErstbetrittBraustandhausen
+execute as @e[type=minecraft:armor_stand,tag=EtiZonMa.3Rangfolge] store result score @s PZZonMa.3Betritt run scoreboard players add VarZonMa.3Rangfolge PZZonMa.3Betritt 1
+tag @e[type=minecraft:armor_stand,tag=EtiZonMa.3Rangfolge] remove EtiZonMa.3Rangfolge
+
+execute as @e[type=minecraft:armor_stand,tag=EtiZonMa.3Zone] at @s run function zonen-markierung:v3markierung
+
+
+tag @a[tag=EtiZonMa.3Nachricht,scores={PZZonMa.3Betritt=1..}] remove EtiZonMa.3Nachricht
+scoreboard players set @a PZZonMa.3Betritt 2147483647
+execute as @e[type=minecraft:armor_stand,tag=EtiZonMa.3Kugel] at @s run scoreboard players operation @a[distance=..5] PZZonMa.3Betritt < @s PZZonMa.3Betritt
+execute as @e[type=minecraft:armor_stand,tag=EtiZonMa.3Quader] at @s positioned ~-5 ~ ~-5 run scoreboard players operation @a[dx=10,dy=5,dz=10] PZZonMa.3Betritt < @s PZZonMa.3Betritt
+
+execute as @e[type=minecraft:armor_stand,tag=EtiZonMa.3Zone] at @s at @a[distance=..15,tag=EtiZonMa.3Nachricht] if score @s PZZonMa.3Betritt = @p PZZonMa.3Betritt unless score @p PZZonMa.3Nummer = @s PZZonMa.3Nummer run tag @p remove EtiZonMa.3Nachricht
+execute as @e[type=minecraft:armor_stand,tag=EtiZonMa.3Zone] at @s at @a[distance=..15] if score @s PZZonMa.3Betritt = @p PZZonMa.3Betritt run scoreboard players operation @p PZZonMa.3Nummer = @s PZZonMa.3Nummer
+
+execute as @e[type=minecraft:armor_stand,tag=EtiZonMa.3Zone] at @s at @a[distance=..15,tag=!EtiZonMa.3Nachricht,scores={PZZonMa.3Betritt=..2147483646}] if score @s PZZonMa.3Betritt = @p PZZonMa.3Betritt run tellraw @p ["Zonen-Markierung.3:\n",{"text":"Sie betreten [","color":"gray","bold":true},{"entity":"@s","nbt":"ArmorItems[3].id","color":"gold","bold":true},{"entity":"@s","nbt":"CustomName","interpret":true},{"text":"]","color":"gray","bold":true}]
+
+execute as @e[type=minecraft:armor_stand,tag=EtiZonMa.3Zone] at @s at @a[distance=..15,tag=!EtiZonMa.3Nachricht,scores={PZZonMa.3Betritt=..2147483646}] if score @s PZZonMa.3Betritt = @p PZZonMa.3Betritt run title @p actionbar ["",{"text":"Sie betreten [","color":"gray","bold":true},{"entity":"@s","nbt":"ArmorItems[3].id","color":"gold","bold":true},{"entity":"@s","nbt":"CustomName","interpret":true},{"text":"]","color":"gray","bold":true}]
+
+
+tag @a[tag=!EtiZonMa.3Nachricht,scores={PZZonMa.3Betritt=..2147483646}] add EtiZonMa.3Nachricht
+
+tellraw @a[tag=EtiZonMa.3Nachricht,scores={PZZonMa.3Betritt=2147483647}] ["Zonen-Markierung.3:\n",{"text":"Sie verlassen die Zone","color":"gray","bold":true}]
+title @a[tag=EtiZonMa.3Nachricht,scores={PZZonMa.3Betritt=2147483647}] actionbar ["",{"text":"Sie verlassen die Zone","color":"gray","bold":true}]
+tag @a[tag=EtiZonMa.3Nachricht,scores={PZZonMa.3Betritt=2147483647}] remove EtiZonMa.3Nachricht
+
 scoreboard players set @a[scores={PZZonMa.3Betritt=1..}] PZZonMa.3Betritt 0
-execute as @e[type=minecraft:armor_stand,name=Werkbankhausen] at @s positioned ~-7 ~ ~-7 run title @a[dx=15,dy=15,dz=15,tag=!EtiZonMa.3ErstbetrittWerkbankhausen] title ["",{"text":"[ "},{"selector":"@s"},{"text":" ]"} ]
-execute at @e[type=minecraft:armor_stand,name=Werkbankhausen] positioned ~-7 ~ ~-7 run tag @a[dx=15,dy=15,dz=15,tag=!EtiZonMa.3ErstbetrittWerkbankhausen] add EtiZonMa.3ErstbetrittWerkbankhausen
-execute as @e[type=minecraft:armor_stand,name=Braustandhausen] at @s positioned ~-7 ~ ~-7 run title @a[dx=15,dy=15,dz=15,tag=!EtiZonMa.3ErstbetrittBraustandhausen] title ["",{"text":"[ "},{"selector":"@s"},{"text":" ]"} ]
-execute at @e[type=minecraft:armor_stand,name=Braustandhausen] positioned ~-7 ~ ~-7 run tag @a[dx=15,dy=15,dz=15,tag=!EtiZonMa.3ErstbetrittBraustandhausen] add EtiZonMa.3ErstbetrittBraustandhausen
-execute as @e[type=minecraft:armor_stand,tag=EtiZonMa.3Alle] at @s positioned ~-7 ~ ~-7 run tellraw @a[dx=15,dy=15,dz=15,tag=!EtiZonMa.3Nachricht] ["",{"text":"Zonen-Markierung.3 "},{"text":"Du betrittst "},{"selector":"@s"} ]
-execute at @e[type=minecraft:armor_stand,tag=EtiZonMa.3Alle] positioned ~-7 ~ ~-7 run tag @a[dx=15,dy=15,dz=15,tag=!EtiZonMa.3Nachricht] add EtiZonMa.3Nachricht
-execute at @e[type=minecraft:armor_stand,tag=EtiZonMa.3Alle] positioned ~-7 ~ ~-7 run tag @a[dx=15,dy=15,dz=15,tag=!EtiZonMa.3BeiZone] add EtiZonMa.3BeiZone
-execute as @a[tag=EtiZonMa.3Nachricht,tag=!EtiZonMa.3BeiZone] at @s if entity @e[type=minecraft:armor_stand,tag=EtiZonMa.3Alle,sort=nearest,limit=1] run tellraw @s ["",{"text":"Zonen-Markierung.3 "},{"text":"Du verlässt "},{"selector":"@e[type=minecraft:armor_stand,tag=EtiZonMa.3Alle,sort=nearest,limit=1]"} ]
-tag @a[tag=EtiZonMa.3Nachricht,tag=!EtiZonMa.3BeiZone] remove EtiZonMa.3Nachricht
-tag @a[tag=EtiZonMa.3BeiZone] remove EtiZonMa.3BeiZone
-execute at @a[tag=!EtiZonMa.3Nachricht] at @e[distance=..50,type=minecraft:armor_stand,tag=EtiZonMa.3Alle] positioned ~ ~ ~8 run particle minecraft:totem_of_undying ~ ~2 ~ 3 0 0 0.2 5 force @a[distance=..25]
-execute at @a[tag=!EtiZonMa.3Nachricht] at @e[type=minecraft:armor_stand,tag=EtiZonMa.3Alle,distance=..50] positioned ~ ~ ~-7 run particle minecraft:totem_of_undying ~ ~2 ~ 3 0 0 0.2 5 force @a[distance=..25]
-execute at @a[tag=!EtiZonMa.3Nachricht] at @e[type=minecraft:armor_stand,tag=EtiZonMa.3Alle,distance=..50] positioned ~8 ~ ~ run particle minecraft:totem_of_undying ~ ~2 ~ 0 0 3 0.2 5 force @a[distance=..25]
-execute at @a[tag=!EtiZonMa.3Nachricht] at @e[type=minecraft:armor_stand,tag=EtiZonMa.3Alle,distance=..50] positioned ~-7 ~ ~ run particle minecraft:totem_of_undying ~ ~2 ~ 0 0 3 0.2 5 force @a[distance=..25]
+
+execute at @a[distance=..50] at @e[distance=..3,type=minecraft:armor_stand,tag=EtiZonMa.3Zone,tag=!EtiZonMa.3Symbol] as @e[distance=..3,type=minecraft:item,sort=nearest,limit=1] at @s run function zonen-markierung:v3drop

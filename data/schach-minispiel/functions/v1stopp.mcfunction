@@ -1,9 +1,18 @@
+
 scoreboard objectives remove PZSchMS.1Brett
 scoreboard objectives remove PZSchMS.1Farbe
 scoreboard objectives remove PZSchMS.1Spielz
+scoreboard objectives remove PZSchMS.1Punkte
 
-tag @e[type=minecraft:item,nbt={Item:{tag:{schach-minispiel:"v1gegenstand"} } }] add EtiSchMS.1Alle
+data remove storage schach-minispiel:v1werte "EigSchMS.1Variante"
+data remove storage schach-minispiel:v1werte "EigSchMS.1Horde"
+
+execute at @e[type=minecraft:area_effect_cloud,tag=EtiSchMS.1Feld] run fill ~ ~ ~ ~2 ~1 ~2 minecraft:air replace
+
+tag @e[type=minecraft:item,nbt={Item:{tag:{EigSchMS.1Alle:true} } }] add EtiSchMS.1Alle
 execute as @e[tag=EtiSchMS.1Alle] at @s run teleport @s ~ -255 ~
 kill @e[tag=EtiSchMS.1Alle]
 
-clear @a[distance=..50] minecraft:armor_stand{schach-minispiel:"v1gegenstand"}
+clear @a minecraft:armor_stand{EigSchMS.1Alle:true}
+
+forceload remove ~ ~

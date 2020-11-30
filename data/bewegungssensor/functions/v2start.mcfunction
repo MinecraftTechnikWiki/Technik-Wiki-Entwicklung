@@ -2,10 +2,7 @@
 scoreboard objectives add PZBewS.2X dummy ["Bewegungssensor.2: ",{"text":"Die X-Koordinate","bold":true}]
 scoreboard objectives add PZBewS.2Y dummy ["Bewegungssensor.2: ",{"text":"Die Y-Koordinate","bold":true}]
 scoreboard objectives add PZBewS.2Z dummy ["Bewegungssensor.2: ",{"text":"Die Z-Koordinate","bold":true}]
-scoreboard objectives add PZBewS.2XVergl dummy ["Bewegungssensor.2: ",{"text":"Die letzte X-Koordinate","bold":true}]
-scoreboard objectives add PZBewS.2YVergl dummy ["Bewegungssensor.2: ",{"text":"Die letzte Y-Koordinate","bold":true}]
-scoreboard objectives add PZBewS.2ZVergl dummy ["Bewegungssensor.2: ",{"text":"Die letzte Z-Koordinate","bold":true}]
 scoreboard objectives add PZBewS.2Ric dummy ["Bewegungssensor.2: ",{"text":"Die Richtung","bold":true}]
-scoreboard objectives add PZBewS.2RicVergl dummy ["Bewegungssensor.2: ",{"text":"Die letzte Richtung","bold":true}]
 scoreboard objectives add PZBewS.2Nei dummy ["Bewegungssensor.2: ",{"text":"Die Neigung","bold":true}]
-scoreboard objectives add PZBewS.2NeiVergl dummy ["Bewegungssensor.2: ",{"text":"Die letzte Neigung","bold":true}]
+
+give @a[distance=..15] minecraft:stick{EigBewS.2Alle:true,EigBewS.2Sensor:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Bewegungssensor","color":"dark_purple","bold":true}',Lore:['"Wähle den Stock aus"','"um nach der Bewegung"','"zu testen."'] } }

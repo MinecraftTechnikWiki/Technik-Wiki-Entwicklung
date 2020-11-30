@@ -1,9 +1,0 @@
-
-execute as @a[distance=..50,scores={PZStaMa.3Wert=1..}] run scoreboard players operation VarStaMa.3Variable PZStaMa.3Wert = @s PZStaMa.3Wert
-
-execute if score VarStaMa.3Variable PZStaMa.3Wert matches 0.. as @a[distance=..50] unless entity @s[scores={PZStaMa.3Wert=0}] run tellraw @s ["Standort-Markierung.3: ",{"text":"\ngroesse = ","bold":true},{"text":"5","color":"gray","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Tippe für den Wert"} },"clickEvent":{"action":"run_command","value":"/trigger PZStaMa.3Wert set 5"} },{"text":"\ngroesse = ","bold":true},{"text":"10","color":"gray","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Tippe für den Wert"} },"clickEvent":{"action":"run_command","value":"/trigger PZStaMa.3Wert set 10"} },{"text":"\ngroesse = ","bold":true},{"text":"15","color":"gray","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Tippe für den Wert"} },"clickEvent":{"action":"run_command","value":"/trigger PZStaMa.3Wert set 15"} },{"text":"\ngroesse = ","bold":true},{"text":"20","color":"gray","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Tippe für den Wert"} },"clickEvent":{"action":"run_command","value":"/trigger PZStaMa.3Wert set 20"} },{"text":"\ngroesse = ","bold":true},{"text":"25","color":"gray","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Tippe für den Wert"} },"clickEvent":{"action":"run_command","value":"/trigger PZStaMa.3Wert set 25"} },{"text":"\ngroesse == ","bold":true},{"score":{"name":"VarStaMa.3Variable","objective":"PZStaMa.3Wert"},"color":"dark_purple","bold":true}]
-
-execute as @a[distance=..50] unless entity @s[scores={PZStaMa.3Wert=0}] run scoreboard players enable @s PZStaMa.3Wert
-execute as @a[distance=..50] unless entity @s[scores={PZStaMa.3Wert=0}] run scoreboard players set @s PZStaMa.3Wert 0
-
-execute as @e[type=minecraft:armor_stand,tag=EtiStaMa.3Mittelpunkt] at @s run function standort-markierung:v3mittelpunkt

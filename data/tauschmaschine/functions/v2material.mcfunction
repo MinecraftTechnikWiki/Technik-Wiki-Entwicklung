@@ -13,10 +13,10 @@ tellraw @p[tag=!EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] ["Tauschmaschine.2
 tellraw @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] ["Tauschmaschine.2: ",{"text":"Du hast das Material getauscht","color":"green","bold":true}]
 
 clear @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:emerald 1
-execute if entity @s[name="Stein"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:stone{tauschmaschine:"v2gegenstand"} 1
-execute if entity @s[name="Eichenstamm"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:oak_log{tauschmaschine:"v2gegenstand"} 1
-execute if entity @s[name="Schwamm"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:sponge{tauschmaschine:"v2gegenstand"} 1
-execute if entity @s[name="Redstone"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:redstone{tauschmaschine:"v2gegenstand"} 1
-execute if entity @s[name="Wassereimer"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:water_bucket{tauschmaschine:"v2gegenstand"} 1
+execute if entity @s[name="Stein"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:stone{EigTausM.2Alle:true} 1
+execute if entity @s[name="Eichenstamm"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:oak_log{EigTausM.2Alle:true} 1
+execute if entity @s[name="Schwamm"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:sponge{EigTausM.2Alle:true} 1
+execute if entity @s[name="Redstone"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:redstone{EigTausM.2Alle:true} 1
+execute if entity @s[name="Wassereimer"] run give @p[tag=EtiTausM.2Smaragde,scores={PZTausM.2Ausl=10}] minecraft:water_bucket{EigTausM.2Alle:true} 1
 
 tag @p[tag=EtiTausM.2Smaragde] remove EtiTausM.2Smaragde

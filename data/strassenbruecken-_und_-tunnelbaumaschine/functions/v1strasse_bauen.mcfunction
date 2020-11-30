@@ -1,6 +1,6 @@
 
 execute at @e[distance=..10,type=minecraft:armor_stand,tag=EtiStrBTBM.1Strassenbett,sort=nearest,limit=3] rotated ~ 0 run fill ^6 ^ ^-2 ^-6 ^4 ^-2 minecraft:light_gray_stained_glass replace minecraft:cave_air
-execute at @e[distance=..10,type=minecraft:armor_stand,tag=EtiStrBTBM.1Strassenbett,sort=nearest,limit=3] rotated ~ 0 run fill ^5 ^1 ^-2 ^-5 ^3 ^-2 minecraft:air replace
+execute at @e[distance=..10,type=minecraft:armor_stand,tag=EtiStrBTBM.1Strassenbett,sort=nearest,limit=1] rotated ~ 0 run fill ^5 ^1 ^-2 ^-5 ^3 ^-2 minecraft:air replace
 
 execute if entity @e[distance=..2,type=minecraft:armor_stand,tag=EtiStrBTBM.1Zweierspur,name="falsch"] at @e[distance=..10,type=minecraft:armor_stand,tag=EtiStrBTBM.1Wasser,sort=nearest,limit=1] rotated ~ 0 run fill ^3 ^1 ^1 ^-3 ^1 ^-1 minecraft:stone_brick_slab replace minecraft:air
 execute if entity @e[distance=..2,type=minecraft:armor_stand,tag=EtiStrBTBM.1Zweierspur,name="falsch"] at @e[distance=..10,type=minecraft:armor_stand,tag=EtiStrBTBM.1Wasser,sort=nearest,limit=1] rotated ~ 0 run fill ^1 ^1 ^ ^-1 ^1 ^ minecraft:water replace

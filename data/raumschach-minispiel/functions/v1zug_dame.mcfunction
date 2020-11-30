@@ -1,0 +1,4 @@
+
+function raumschach-minispiel:v1zug_laeufer
+function raumschach-minispiel:v1zug_turm
+function raumschach-minispiel:v1zug_einhorn

@@ -12,10 +12,10 @@ execute if entity @s[scores={PZSchwB.p2Ausl=1}] as @e[distance=..2,type=minecraf
 
 execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,CustomName:'{"text":"Bahnsteig","color":"red","bold":true}',Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Halter","EtiSchwB.p2Ansicht"],Passengers:[{id:"minecraft:minecart",Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Sitz"]}]}
 
-execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Passagier1"],Passengers:[{id:"minecraft:boat",Tags:["EtiSchwB.p2Alle"]}]}
-execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Passagier2"],Passengers:[{id:"minecraft:boat",Tags:["EtiSchwB.p2Alle"]}]}
-execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Passagier3"],Passengers:[{id:"minecraft:boat",Tags:["EtiSchwB.p2Alle"]}]}
-execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Passagier4"],Passengers:[{id:"minecraft:boat",Tags:["EtiSchwB.p2Alle"]}]}
+execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Passagier1"],Passengers:[{id:"minecraft:boat",Tags:["EtiSchwB.p2Alle"] } ] }
+execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Passagier2"],Passengers:[{id:"minecraft:boat",Tags:["EtiSchwB.p2Alle"] } ] }
+execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Passagier3"],Passengers:[{id:"minecraft:boat",Tags:["EtiSchwB.p2Alle"] } ] }
+execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Passagier4"],Passengers:[{id:"minecraft:boat",Tags:["EtiSchwB.p2Alle"] } ] }
 
 execute if entity @s[scores={PZSchwB.p2Ausl=1}] run teleport @a[distance=..5] ^5 ^1 ^
 

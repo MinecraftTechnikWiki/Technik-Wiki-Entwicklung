@@ -22,3 +22,6 @@ clear @a minecraft:smooth_quartz{strassenbaumaschine:"v1gegenstand"}
 
 tag @e[type=minecraft:item,nbt={strassenbaumaschine:"v1gegenstand"}] add EtiStraB.1Alle
 kill @e[tag=EtiStraB.1Alle]
+
+# Der Chunk wird deaktiviert.
+forceload remove ~ ~

@@ -3,10 +3,10 @@ tag @p[distance=..15,tag=EtiStrBTBM.1SpielerSitzt] remove EtiStrBTBM.1SpielerSit
 tag @p[distance=..15,tag=EtiStrBTBM.1SpielerAngel] remove EtiStrBTBM.1SpielerAngel
 
 tag @p[distance=..10,tag=!EtiStrBTBM.1SpielerSitzt,nbt={RootVehicle:{Entity:{Tags:["EtiStrBTBM.1Halter"] } } }] add EtiStrBTBM.1SpielerSitzt
-tag @p[distance=..10,tag=EtiStrBTBM.1SpielerSitzt,tag=!EtiStrBTBM.1SpielerAngel,nbt={SelectedItem:{id:"minecraft:fishing_rod",tag:{strassenbruecken-_und_-tunnelbaumaschine:"v1gegenstand"} } }] add EtiStrBTBM.1SpielerAngel
+tag @p[distance=..10,tag=EtiStrBTBM.1SpielerSitzt,tag=!EtiStrBTBM.1SpielerAngel,nbt={SelectedItem:{id:"minecraft:fishing_rod",tag:{EigStrBTBM.1Alle:true} } }] add EtiStrBTBM.1SpielerAngel
 
 tag @p[distance=..10,tag=!EtiStrBTBM.1SpielerAngel,tag=EtiStrBTBM.1Nachricht] remove EtiStrBTBM.1Nachricht
-execute as @p[distance=..10,tag=EtiStrBTBM.1SpielerAngel] run function strassenbruecken-_und_-tunnelbaumaschine:v1steuern
+execute as @p[distance=..10,tag=EtiStrBTBM.1SpielerAngel] run function strassenbruecken-_und_-tunnelbaumaschine:v1ausloeser
 
 teleport @s ~ ~ ~ facing entity @p[distance=..10,tag=EtiStrBTBM.1SpielerSitzt] feet
 execute rotated as @p[distance=..10,tag=EtiStrBTBM.1SpielerAngel] run teleport @s ~ ~ ~ ~180 ~

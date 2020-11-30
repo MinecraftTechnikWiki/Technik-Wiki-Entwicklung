@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:white_concrete",
+    "minecraft:black_concrete",
+    "minecraft:white_stained_glass",
+    "minecraft:black_stained_glass"
+  ]
+}

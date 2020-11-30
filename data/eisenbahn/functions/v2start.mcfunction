@@ -1,10 +1,11 @@
 
 scoreboard objectives add PZEisenB.2Schl minecraft.custom:minecraft.sneak_time ["Eisenbahn.2: ",{"text":"Schleichzeit","bold":true}]
+scoreboard objectives add PZEisenB.2Waggon dummy ["Eisenbahn.2: ",{"text":"Anzahl der Waggons","bold":true}]
 
-give @a[distance=..25] minecraft:armor_stand{EigEisenB.2Alle:true,display:{Name:'{"text":"Eisenbahn"}',Lore:['"Platziere den Rüstungsständer"','"um die Lok zu erstellen"']},EntityTag:{Invisible:true,Small:true,NoGravity:true,CustomNameVisible:true,CustomName:'{"text":"Eisenbahn"}',Tags:["EtiEisenB.2Alle","EtiEisenB.2Lok","EtiEisenB.2Erstellen"],ArmorItems:[{},{},{},{id:"minecraft:magenta_glazed_terracotta",Count:1b}],Pose:{Head:[0.0f,0.0f,180.0f] } } }
+give @a[distance=..25] minecraft:armor_stand{EigEisenB.2Alle:true,display:{Name:'{"text":"Eisenbahn"}',Lore:['"Platziere den Rüstungsständer"','"um das Anfangsmodul der"','"der Eisenbahn zu erstellen"']},EntityTag:{Invisible:true,Small:true,NoGravity:true,CustomNameVisible:true,CustomName:'{"text":"Eisenbahn"}',Tags:["EtiEisenB.2Alle","EtiEisenB.2Erstellen"],ArmorItems:[{},{},{},{id:"minecraft:magenta_glazed_terracotta",Count:1b}],Pose:{Head:[0.0f,0.0f,180.0f] } } } 1
 
-give @a[distance=..25] minecraft:armor_stand{EigEisenB.2Alle:true,display:{Name:'{"text":"Eisenbahnstrecke"}',Lore:['"Platziere den Rüstungsständer"','"um die Gleisstrecke zu erstellen"']},EntityTag:{Tags:["EtiEisenB.2Alle","EtiEisenB.2Bauwerk","EtiEisenB.2Gleisstrecke"]} }
+give @a[distance=..25] minecraft:furnace{EigEisenB.2Alle:true,display:{Name:'{"text":"Lok"}',Lore:['"Wirf den Gegenstand"','"auf die Eisenbahn,"','"um den Zug zu vergrößern"']} } 3
+give @a[distance=..25] minecraft:chest{EigEisenB.2Alle:true,display:{Name:'{"text":"Waggon"}',Lore:['"Wirf den Gegenstand"','"auf die Eisenbahn,"','"um den Zug zu vergrößern"']} } 3
+give @a[distance=..25] minecraft:shulker_box{EigEisenB.2Alle:true,display:{Name:'{"text":"Steuerwaggon"}',Lore:['"Wirf den Gegenstand"','"auf die Eisenbahn,"','"um den Zug zu vergrößern"']} } 3
 
-give @a[distance=..25] minecraft:armor_stand{EigEisenB.2Alle:true,display:{Name:'{"text":"Eisenbahnstation"}',Lore:['"Platziere den Rüstungsständer"','"um die Station zu erstellen"']},EntityTag:{Tags:["EtiEisenB.2Alle","EtiEisenB.2Bauwerk","EtiEisenB.2Station"]} }
-
-tellraw @a[distance=..15] ["Eisenbahn.2: ",{"text":"Es gibt drei Rüstungsständer für die Eisenbahnlok. Der erste platziert die Lok auf einem Gleis, der zweite setzt das Eisenbahngleis und der dritte wird für die Station verwendet.","bold":true}]
+tellraw @a[distance=..15] ["Eisenbahn.2: ",{"text":"Öffne mit der Taste E das Inventar und fahre mit der Maus über die Gegenstände, um zu erfahren wie man sie benutzt. Nachdem die Eisenbahn mit Waggons erstellt ist, schleiche mit der Taste Shift und schaue in die Fahrtrichtung, um den Zug zu fahren.","bold":true}]
