@@ -1,4 +1,4 @@
-#say spielzug
+
 tag @s add EtiRSchMS.1ZugHierher
 
 #execute unless score VarRSchMS.1Variante PZRSchMS.1Brett matches 1.. positioned ~ ~-2 ~ if entity @e[distance=..2,tag=EtiRSchMS.1Koenig] as @e[type=minecraft:horse,tag=EtiRSchMS.1Figur] if score @s PZRSchMS.1Farbe = @e[distance=..2,tag=EtiRSchMS.1Koenig,tag=EtiRSchMS.1Anklickbar,sort=nearest,limit=1] PZRSchMS.1Farbe run teleport @s ~ -255 ~

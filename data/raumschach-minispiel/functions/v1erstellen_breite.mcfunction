@@ -1,4 +1,4 @@
-#say breite
+
 scoreboard players add VarRSchMS.1Breite PZRSchMS.1Brett 1
 scoreboard players set VarRSchMS.1Hoehe PZRSchMS.1Brett 0
 

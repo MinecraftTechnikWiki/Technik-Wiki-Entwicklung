@@ -9,4 +9,4 @@ execute if score VarRadiW.2Vielfaches PZRadiW.2Wert <= VarRadiW.2Variable1 PZRad
 scoreboard players add VarRadiW.2ZahlSchleife1 PZRadiW.2Wert 1
 execute if score VarRadiW.2Vielfaches PZRadiW.2Wert <= VarRadiW.2Variable1 PZRadiW.2Wert run function radizierwerk:v2schleife1
 
-say test1
+#say test1

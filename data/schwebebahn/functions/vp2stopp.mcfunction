@@ -7,3 +7,5 @@ execute at @e[type=minecraft:armor_stand,tag=EtiSchwB.p2Hyperloop] run fill ^-2 
 
 tag @e[type=minecraft:item,nbt={Item:{tag:{EigSchwB.p2Alle:true} } }] add EtiSchwB.p2Alle
 kill @e[tag=EtiSchwB.p2Alle]
+
+forceload remove ~ ~

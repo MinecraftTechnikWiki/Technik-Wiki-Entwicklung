@@ -6,3 +6,5 @@ give @a[distance=..15] minecraft:armor_stand{EigSchwB.p2Alle:true,display:{Name:
 give @a[distance=..15] minecraft:armor_stand{EigSchwB.p2Alle:true,display:{Name:'{"text":"Hyperloop-Strecke"}',Lore:['"Platziere den Rüstungsständer"','"um eine Hyperloop-Strecke"','"zu erstellen"'] },EntityTag:{Tags:["EtiSchwB.p2Alle","EtiSchwB.p2Strecke","EtiSchwB.p2Gleis"] } }
 
 tellraw @a[distance=..15] ["Schwebebahn.erweitert.2: ",{"text":"Drücke E um das Inventar zu öffnen und fahre mit der Maus über die Rüstungsständer, um zu erfahren wie man sie einsetzt um die Hyperloop zu benutzen.","bold":true}]
+
+forceload add ~ ~

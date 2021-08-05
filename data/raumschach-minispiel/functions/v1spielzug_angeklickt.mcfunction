@@ -1,4 +1,4 @@
-#say hi
+
 tag @e[tag=EtiRSchMS.1FigurBoden,tag=EtiRSchMS.1Bewegen] remove EtiRSchMS.1Bewegen
 effect clear @e[tag=EtiRSchMS.1Leuchten] minecraft:glowing
 tag @e[tag=EtiRSchMS.1Leuchten] remove EtiRSchMS.1Leuchten

@@ -1,4 +1,4 @@
-#say erstellen
+
 execute at @e[type=minecraft:area_effect_cloud,tag=EtiRSchMS.1Feld] run fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:air replace
 
 execute as @e[tag=EtiRSchMS.1Alle] at @s run teleport @s ~ -255 ~
@@ -20,10 +20,8 @@ execute at @e[type=minecraft:area_effect_cloud,tag=EtiRSchMS.1Feld,scores={PZRSc
 execute if score VarRSchMS.1Variante PZRSchMS.1Brett matches 0 run function raumschach-minispiel:v1erstellen_2_figuren
 execute if score VarRSchMS.1Variante PZRSchMS.1Brett matches 1 run function raumschach-minispiel:v1erstellen_3_figuren
 
-execute as @e[tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=1}] store result entity @s ArmorItems[3].tag.display.color int 1 run scoreboard players get KonstRSchMS.1TUERKIS PZRSchMS.1Farbe
-execute as @e[tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=2}] store result entity @s ArmorItems[3].tag.display.color int 1 run scoreboard players get KonstRSchMS.1SCHWARZ PZRSchMS.1Farbe
-execute as @e[tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=3}] store result entity @s ArmorItems[3].tag.display.color int 1 run scoreboard players get KonstRSchMS.1ORANGE PZRSchMS.1Farbe
-
-execute as @e[tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=1..3}] store result entity @s ArmorItems[1].tag.display.color int 1 store result entity @s ArmorItems[2].tag.display.color int 1 run data get entity @s ArmorItems[3].tag.display.color 1
+execute as @e[tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=1}] store result entity @s ArmorItems[].tag.display.color int 1 run scoreboard players get KonstRSchMS.1TUERKIS PZRSchMS.1Farbe
+execute as @e[tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=2}] store result entity @s ArmorItems[].tag.display.color int 1 run scoreboard players get KonstRSchMS.1SCHWARZ PZRSchMS.1Farbe
+execute as @e[tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=3}] store result entity @s ArmorItems[].tag.display.color int 1 run scoreboard players get KonstRSchMS.1ORANGE PZRSchMS.1Farbe
 
 scoreboard players set @e[tag=EtiRSchMS.1Anklickbar] PZRSchMS.1Spielz 0

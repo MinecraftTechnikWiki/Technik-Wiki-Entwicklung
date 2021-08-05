@@ -1,7 +1,10 @@
 
 scoreboard objectives remove PZSchwB.p1Ausl
+scoreboard objectives remove PZSchwB.p1Wert
 
 clear @a minecraft:armor_stand{EigSchwB.p1Alle:true}
+
+tag @a[tag=EtiSchwB.p1Auswahl] remove EtiSchwB.p1Auswahl
 
 execute at @e[type=minecraft:armor_stand,tag=EtiSchwB.p1Transrapid] run fill ^-2 ^-1 ^-21 ^2 ^4 ^21 minecraft:air replace
 execute at @e[type=minecraft:armor_stand,tag=EtiSchwB.p1Transrapid] run fill ^-2 ^-2 ^-20 ^2 ^-2 ^20 minecraft:air replace minecraft:quartz_stairs

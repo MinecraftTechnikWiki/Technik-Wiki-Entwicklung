@@ -4,9 +4,7 @@ teleport @s[y_rotation=-135..-45] ~ ~ ~ 270 0
 teleport @s[y_rotation=-45..45] ~ ~ ~ 0 0
 teleport @s[y_rotation=45..135] ~ ~ ~ 90 0
 
-execute at @s[tag=EtiEisenB.1Strecke] run setblock ^ ^ ^-15 minecraft:structure_block{mode:"LOAD"} replace
-
-execute at @s[tag=EtiEisenB.1Gleis] run data merge block ^ ^ ^-15 {name:"eisenbahn:v1eisenbahngleis"}
+execute at @s[tag=EtiEisenB.1Strecke] run setblock ^ ^ ^-15 minecraft:structure_block{mode:"LOAD",name:"eisenbahn:v1eisenbahngleis"} replace
 
 execute at @s[tag=EtiEisenB.1Gleis] if entity @p[y_rotation=45..135] run data merge block ^ ^ ^-15 {rotation:"CLOCKWISE_180",posX:15,posY:0,posZ:3}
 execute at @s[tag=EtiEisenB.1Gleis] if entity @p[y_rotation=135..-135] run data merge block ^ ^ ^-15 {rotation:"COUNTERCLOCKWISE_90",posX:-3,posY:0,posZ:15}

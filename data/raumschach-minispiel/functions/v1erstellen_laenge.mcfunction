@@ -1,4 +1,4 @@
-#say laenge
+
 scoreboard players add VarRSchMS.1Laenge PZRSchMS.1Brett 1
 scoreboard players set VarRSchMS.1Breite PZRSchMS.1Brett 0
 

@@ -19,6 +19,6 @@ execute if entity @s[scores={PZSchwB.p2Ausl=1}] run summon minecraft:armor_stand
 
 execute if entity @s[scores={PZSchwB.p2Ausl=1}] run teleport @a[distance=..5] ^5 ^1 ^
 
-execute unless entity @s[scores={PZSchwB.p2Ausl=1}] run tellraw @a[distance=..5] ["Schwebebahn.erweitert.2: ",{"text":"Es wurde unter dem Rüstungsständer für die Hyperloop keine Hyperloop-Strecke gefunden!","color":"red","bold":true}]
+execute unless entity @s[scores={PZSchwB.p2Ausl=1}] run tellraw @a[distance=..5] ["Schwebebahn.erweitert.2: ",{"text":"Es wurde unter dem Rüstungsständer für die Hyperloop keine vollständige Hyperloop-Strecke gefunden!","color":"red","bold":true}]
 
 kill @s

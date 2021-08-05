@@ -26,7 +26,6 @@ scoreboard players set VarRSchMS.1BreiteMax PZRSchMS.1Brett 4
 scoreboard players set VarRSchMS.1LaengeMax PZRSchMS.1Brett 3
 execute positioned ~5 ~ ~-15 run function raumschach-minispiel:v1erstellen_laenge
 
-
 scoreboard players set VarRSchMS.1Farbe PZRSchMS.1Farbe 1
 scoreboard players set VarRSchMS.1Rotation PZRSchMS.1Brett 1
 
@@ -48,7 +47,6 @@ scoreboard players set VarRSchMS.1BreiteMax PZRSchMS.1Brett 4
 scoreboard players set VarRSchMS.1LaengeMax PZRSchMS.1Brett 3
 execute positioned ~5 ~ ~30 run function raumschach-minispiel:v1erstellen_laenge
 
-
 scoreboard players set VarRSchMS.1Farbe PZRSchMS.1Farbe 2
 scoreboard players set VarRSchMS.1Rotation PZRSchMS.1Brett 2
 
@@ -68,7 +66,6 @@ scoreboard players set VarRSchMS.1Laenge PZRSchMS.1Brett 0
 scoreboard players set VarRSchMS.1BreiteMax PZRSchMS.1Brett 3
 scoreboard players set VarRSchMS.1LaengeMax PZRSchMS.1Brett 4
 execute positioned ~30 ~ ~5 run function raumschach-minispiel:v1erstellen_laenge
-
 
 scoreboard players set VarRSchMS.1Farbe PZRSchMS.1Farbe 3
 scoreboard players set VarRSchMS.1Rotation PZRSchMS.1Brett 3

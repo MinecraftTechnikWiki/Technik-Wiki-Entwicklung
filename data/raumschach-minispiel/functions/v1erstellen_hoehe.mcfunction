@@ -1,4 +1,4 @@
-#say hoehe
+
 execute if score VarRSchMS.1Muster PZRSchMS.1Brett matches 1 run scoreboard players add VarRSchMS.1Hoehe PZRSchMS.1Brett 1
 
 scoreboard players operation @s PZRSchMS.1Farbe = VarRSchMS.1Laenge PZRSchMS.1Brett

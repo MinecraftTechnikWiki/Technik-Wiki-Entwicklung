@@ -8,4 +8,4 @@ scoreboard players set KonstRadiW.2EINS PZRadiW.2Wert 1
 scoreboard players set KonstRadiW.2ZWEI PZRadiW.2Wert 2
 scoreboard players set KonstRadiW.2MINUSEINS PZRadiW.2Wert -1
 
-data merge storage radizierwerk:v2daten {EigRadi.2Bruch:'""',EigRadi.2Wert:'{"text":"1","color":"dark_purple","bold":true}',EigRadi.2NegativeWurzel:'""'}
+data merge storage radizierwerk:v2daten {EigRadi.2Bruch:'""',EigRadi.2Wert:'{"text":"1","color":"dark_purple","bold":true}',EigRadi.2NegativeWurzel:'""',EigRadi.2Ergebnis:[]}
