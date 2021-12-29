@@ -21,5 +21,5 @@ team modify TMManSV.2Team4 friendlyFire false
 
 give @a[distance=..15] minecraft:stick{EigManSV.2Alle:true,EigManSV.2Stock:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Mannschaftsoptionen","color":"dark_purple","bold":true}',Lore:['"Wähle den Stock aus"','"um die Mannschafts-"','"Optionen anzeigen zu lassen."'] } }
 
-summon minecraft:armor_stand ~-10 ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiManSV.2Alle","EtiManSV.2Plattform"]}
-execute at @e[type=minecraft:armor_stand,tag=EtiManSV.2Plattform] run fill ~-5 ~ ~-5 ~5 ~ ~5 minecraft:gray_concrete replace
+summon minecraft:marker ~-10 ~ ~ {Small:true,Invisible:true,NoGravity:true,Tags:["EtiManSV.2Alle","EtiManSV.2Plattform"]}
+execute at @e[type=minecraft:marker,tag=EtiManSV.2Plattform] run fill ~-5 ~ ~-5 ~5 ~ ~5 minecraft:gray_concrete replace

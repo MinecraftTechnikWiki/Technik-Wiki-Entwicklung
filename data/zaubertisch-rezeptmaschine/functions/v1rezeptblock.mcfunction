@@ -18,7 +18,7 @@ execute if entity @s[tag=EtiZaRezM.1Zauberbuch] store result score VarZaRezM.1An
 execute if entity @s[tag=EtiZaRezM.1Zauberbuch] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 1.. run scoreboard players set VarZaRezM.1Position PZZaRezM.1Wert 0
 execute if entity @s[tag=EtiZaRezM.1Zauberbuch] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 1.. run function zaubertisch-rezeptmaschine:v1zauber
 
-execute if entity @s[tag=EtiZaRezM.1Zauberbuch] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 1.. run replaceitem block ~ ~ ~ container.2 minecraft:enchanted_book
+execute if entity @s[tag=EtiZaRezM.1Zauberbuch] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 1.. run item replace block ~ ~ ~ container.2 with minecraft:enchanted_book
 execute if entity @s[tag=EtiZaRezM.1Zauberbuch] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 1.. run data modify block ~ ~ ~ Items[{Slot:2b}].tag.StoredEnchantments set from block ~ ~ ~ Items[{Slot:0b}].tag.StoredEnchantments
 execute if entity @s[tag=EtiZaRezM.1Zauberbuch,tag=!EtiZaRezM.1Gefunden] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 1.. run data remove block ~ ~ ~ Items[{Slot:2b}].tag.StoredEnchantments[0]
 
@@ -28,8 +28,8 @@ execute if entity @s[tag=EtiZaRezM.1Zauberbuch,tag=!EtiZaRezM.1Gefunden] if scor
 
 
 
-#execute if entity @s[tag=EtiZaRezM.1Zauberbuch] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 1 run replaceitem block ~ ~ ~ container.2 minecraft:book
-#execute if entity @s[tag=EtiZaRezM.1Zauberbuch] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 2.. run replaceitem block ~ ~ ~ container.2 minecraft:enchanted_book
+#execute if entity @s[tag=EtiZaRezM.1Zauberbuch] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 1 run item replace block ~ ~ ~ container.2 with minecraft:book
+#execute if entity @s[tag=EtiZaRezM.1Zauberbuch] if score VarZaRezM.1AnzahlVerzauberung PZZaRezM.1Wert matches 2.. run item replace block ~ ~ ~ container.2 with minecraft:enchanted_book
 
 tag @s[tag=EtiZaRezM.1Zauberbuch] remove EtiZaRezM.1Zauberbuch
 

@@ -11,7 +11,7 @@ scoreboard players set VarRadiW.2Var1NegativUndVar2Ungerade PZRadiW.2Wert 0
 execute if score VarRadiW.2Var1Negativ PZRadiW.2Wert matches 1 if score VarRadiW.2Ungerade PZRadiW.2Wert matches 0 run scoreboard players set VarRadiW.2Var1NegativUndVar2Ungerade PZRadiW.2Wert 1
 
 execute if score VarRadiW.2Var1NegativUndVar2Ungerade PZRadiW.2Wert matches 0 run data merge storage radizierwerk:v2daten {EigRadi.2NegativeWurzel:'""'}
-execute if score VarRadiW.2Var1NegativUndVar2Ungerade PZRadiW.2Wert matches 1 run data merge storage radizierwerk:v2daten {EigRadi.2NegativeWurzel:'{"text":"i","color":"blue","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Imaginäre Einheit i = √-1"} } }'}
+execute if score VarRadiW.2Var1NegativUndVar2Ungerade PZRadiW.2Wert matches 1 run data merge storage radizierwerk:v2daten {EigRadi.2NegativeWurzel:'{"text":"i","color":"blue","bold":true,"hoverEvent":{"action":"show_text","contents":{"text":"Imaginäre Einheit i = √-1"} } }'}
 execute if score VarRadiW.2Var1NegativUndVar2Ungerade PZRadiW.2Wert matches 1 run scoreboard players operation VarRadiW.2Variable1 PZRadiW.2Wert *= KonstRadiW.2MINUSEINS PZRadiW.2Wert
 
 scoreboard players set VarRadiW.2Vielfaches PZRadiW.2Wert 1

@@ -1,5 +1,5 @@
 
-summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:true,Duration:-1,Age:-2147483648,WaitTime:-2147483648,Particle:"minecraft:block minecraft:air",Tags:["EtiSchMS.1Alle","EtiSchMS.1Feld"]}
+summon minecraft:marker ~ ~ ~ {Tags:["EtiSchMS.1Alle","EtiSchMS.1Feld"]}
 
 scoreboard players add VarSchMS.1AktuelleFeldSpalte PZSchMS.1Brett 1
 

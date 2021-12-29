@@ -18,22 +18,22 @@ team modify TMGildSMS.1Blau color blue
 bossbar add gildenschlacht-minispiel:v1teamblau ["",{"text":"Blaue Gilde","bold":true}]
 bossbar set gildenschlacht-minispiel:v1teamblau color blue
 
-summon minecraft:armor_stand ~ ~ ~-30 {Invisible:true,NoGravity:true,Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Bauwerk","EtiGildSMS.1Spielfeld"]}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",rotation:"NONE",posX:-23,posY:0,posZ:0,name:"gildenschlacht-minispiel:v1gebiet1"}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run setblock ~1 ~ ~ minecraft:structure_block{mode:"LOAD",rotation:"NONE",posX:0,posY:0,posZ:0,name:"gildenschlacht-minispiel:v1gebiet2"}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run setblock ~2 ~ ~-1 minecraft:structure_block{mode:"LOAD",rotation:"CLOCKWISE_180",posX:23,posY:0,posZ:0,name:"gildenschlacht-minispiel:v1gebiet1"}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run setblock ~1 ~ ~-1 minecraft:structure_block{mode:"LOAD",rotation:"CLOCKWISE_180",posX:0,posY:0,posZ:0,name:"gildenschlacht-minispiel:v1gebiet2"}
+summon minecraft:marker ~ ~ ~-30 {Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Bauwerk","EtiGildSMS.1Spielfeld"]}
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",rotation:"NONE",posX:-23,posY:0,posZ:0,name:"gildenschlacht-minispiel:v1gebiet1"} replace
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run setblock ~1 ~ ~ minecraft:structure_block{mode:"LOAD",rotation:"NONE",posX:0,posY:0,posZ:0,name:"gildenschlacht-minispiel:v1gebiet2"} replace
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run setblock ~2 ~ ~-1 minecraft:structure_block{mode:"LOAD",rotation:"CLOCKWISE_180",posX:23,posY:0,posZ:0,name:"gildenschlacht-minispiel:v1gebiet1"} replace
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run setblock ~1 ~ ~-1 minecraft:structure_block{mode:"LOAD",rotation:"CLOCKWISE_180",posX:0,posY:0,posZ:0,name:"gildenschlacht-minispiel:v1gebiet2"} replace
 
-summon minecraft:armor_stand ~ ~ ~10 {Invisible:true,NoGravity:true,CustomNameVisible:true,CustomName:'{"text":"Lobbyportal","color":"dark_purple","bold":true}',Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Bauwerk","EtiGildSMS.1Vorhalle"]}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Vorhalle] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-2,posY:0,posZ:-2,name:"gildenschlacht-minispiel:v1portal"}
+summon minecraft:armor_stand ~ ~ ~10 {Invisible:true,NoGravity:true,CustomNameVisible:true,CustomName:'{"text":"Lobbyportal","color":"dark_purple","bold":true}',Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Bauwerk","EtiGildSMS.1Wartehalle"]}
+execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Wartehalle,sort=nearest,limit=1] run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posX:-2,posY:0,posZ:-2,name:"gildenschlacht-minispiel:v1portal"}
 
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Bauwerk] run fill ~2 ~ ~2 ~-2 ~ ~-2 minecraft:redstone_block replace minecraft:air
+execute at @e[tag=EtiGildSMS.1Bauwerk,sort=nearest,limit=2] run fill ~2 ~ ~2 ~-2 ~ ~-2 minecraft:redstone_block replace minecraft:air
 
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run summon minecraft:armor_stand ~ ~ ~ {Invisible:true,Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run summon minecraft:armor_stand ~ ~ ~ {Invisible:true,Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run summon minecraft:armor_stand ~ ~ ~ {Invisible:true,Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run summon minecraft:armor_stand ~ ~ ~ {Invisible:true,Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run summon minecraft:armor_stand ~ ~ ~ {Invisible:true,Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run summon minecraft:armor_stand ~ ~ ~ {Invisible:true,Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~ {Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~ {Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~ {Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~ {Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~ {Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~ {Tags:["EtiGildSMS.1Alle","EtiGildSMS.1Beutetruhe"]}
 
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run spreadplayers ~ ~ 5 20 false @e[distance=..2,type=minecraft:armor_stand,tag=EtiGildSMS.1Beutetruhe]
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld,sort=nearest,limit=1] run spreadplayers ~ ~ 5 20 false @e[distance=..2,type=minecraft:marker,tag=EtiGildSMS.1Beutetruhe,sort=nearest,limit=6]

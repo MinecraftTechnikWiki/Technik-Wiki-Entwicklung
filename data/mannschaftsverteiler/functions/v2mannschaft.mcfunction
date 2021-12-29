@@ -31,13 +31,13 @@ title @a[team=TMManSV.2Team2] title ["",{"text":"Mannschaft 2!","color":"blue","
 title @a[team=TMManSV.2Team3] title ["",{"text":"Mannschaft 3!","color":"green","bold":true}]
 title @a[team=TMManSV.2Team4] title ["",{"text":"Mannschaft 4!","color":"yellow","bold":true}]
 
-replaceitem entity @a[team=TMManSV.2Team1] armor.head minecraft:leather_helmet{EigManSV.2Alle:true,display:{color:16711680},Enchantments:[{id:"binding_curse",lvl:1s}]}
+item replace entity @a[team=TMManSV.2Team1] armor.head with minecraft:leather_helmet{EigManSV.2Alle:true,display:{color:16711680},Enchantments:[{id:"binding_curse",lvl:1s}]}
 
-replaceitem entity @a[team=TMManSV.2Team2] armor.head minecraft:leather_helmet{EigManSV.2Alle:true,display:{color:255},Enchantments:[{id:"binding_curse",lvl:1s}]}
+item replace entity @a[team=TMManSV.2Team2] armor.head with minecraft:leather_helmet{EigManSV.2Alle:true,display:{color:255},Enchantments:[{id:"binding_curse",lvl:1s}]}
 
-replaceitem entity @a[team=TMManSV.2Team3] armor.head minecraft:leather_helmet{EigManSV.2Alle:true,display:{color:6192150},Enchantments:[{id:"binding_curse",lvl:1s}]}
+item replace entity @a[team=TMManSV.2Team3] armor.head with minecraft:leather_helmet{EigManSV.2Alle:true,display:{color:6192150},Enchantments:[{id:"binding_curse",lvl:1s}]}
 
-replaceitem entity @a[team=TMManSV.2Team4] armor.head minecraft:leather_helmet{EigManSV.2Alle:true,display:{color:16701501},Enchantments:[{id:"binding_curse",lvl:1s}]}
+item replace entity @a[team=TMManSV.2Team4] armor.head with minecraft:leather_helmet{EigManSV.2Alle:true,display:{color:16701501},Enchantments:[{id:"binding_curse",lvl:1s}]}
 
 scoreboard players set @a[tag=EtiManSV.2AufPlattform] PZManSV.2Ausl 0
 spreadplayers ~ ~ 2 4 true @a[tag=EtiManSV.2AufPlattform]

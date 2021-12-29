@@ -16,7 +16,7 @@ scoreboard players set VarSchMS.1Variante PZSchMS.1Brett 0
 
 data merge storage schach-minispiel:v1werte {EigSchMS.1Variante:'{"text":"klassisches Schach","color":"blue","bold":true}',EigSchMS.1Horde:'{"text":"falsch","color":"red","bold":true}'}
 
-give @p[distance=..15] minecraft:armor_stand{EigSchMS.1Alle:true,EigSchMS.1Schach:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Schach"}',Lore:['"Platziere den Rüstungsständer"','"um ein Schachfeld zu"','"erzeugen"']},EntityTag:{Marker:true,Tags:["EtiSchMS.1Alle","EtiSchMS.1SchachbrettErstellen"] } }
+give @p[distance=..15] minecraft:armor_stand{EigSchMS.1Alle:true,EigSchMS.1Schach:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Schach","bold":true}',Lore:['"Platziere den Rüstungsständer"','"um ein Schachfeld zu"','"erzeugen"']},EntityTag:{Marker:true,Tags:["EtiSchMS.1Alle","EtiSchMS.1SchachbrettErstellen"] } }
 
 forceload add ~ ~
 

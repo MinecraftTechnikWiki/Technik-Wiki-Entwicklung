@@ -1,5 +1,4 @@
 
-
 data merge entity @s {Tags:["EtiHordMS.1Alle","EtiHordMS.1Gebiet"]}
 
 scoreboard players set VarHordMS.1Breite PZHordMS.1Ausl 1

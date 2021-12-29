@@ -17,7 +17,7 @@ scoreboard players set VarRSchMS.1Variante PZRSchMS.1Brett 0
 
 data merge storage raumschach-minispiel:v1werte {EigRSchMS.1Variante:'{"text":"Raumschach","color":"blue","bold":true}',EigRSchMS.1Horde:'{"text":"falsch","color":"red","bold":true}'}
 
-give @p[distance=..15] minecraft:armor_stand{EigRSchMS.1Alle:true,EigRSchMS.1RaumSchach:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Raumschach"}',Lore:['"Platziere den Rüstungsständer"','"um ein 3D-Schachfeld zu"','"erzeugen"']},EntityTag:{Marker:true,Tags:["EtiRSchMS.1Alle","EtiRSchMS.1SchachbrettErstellen"] } }
+give @p[distance=..15] minecraft:armor_stand{EigRSchMS.1Alle:true,EigRSchMS.1RaumSchach:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Raumschach","bold":true}',Lore:['"Platziere den Rüstungsständer"','"um ein 3D-Schachfeld zu"','"erzeugen"']},EntityTag:{Marker:true,Tags:["EtiRSchMS.1Alle","EtiRSchMS.1SchachbrettErstellen"] } }
 
 forceload add ~ ~
 

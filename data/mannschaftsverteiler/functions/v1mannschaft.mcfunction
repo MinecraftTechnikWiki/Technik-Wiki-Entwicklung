@@ -13,9 +13,9 @@ execute as @a[team=TMManSV.1Team1] if score @s PZManSV.1Wert > VarManSV.1Aufteil
 
 execute if score VarManSV.1Uebrig PZManSV.1Wert matches 1 run function mannschaftsverteiler:v1uebrig
 
-replaceitem entity @a[team=TMManSV.1Team1] armor.head minecraft:leather_helmet{EigManSV.1Alle:true,display:{color:16711680},Enchantments:[{id:"binding_curse",lvl:1s}]}
+item replace entity @a[team=TMManSV.1Team1] armor.head with minecraft:leather_helmet{EigManSV.1Alle:true,display:{color:16711680},Enchantments:[{id:"binding_curse",lvl:1s}]}
 
-replaceitem entity @a[team=TMManSV.1Team2] armor.head minecraft:leather_helmet{EigManSV.1Alle:true,display:{color:255},Enchantments:[{id:"binding_curse",lvl:1s}]}
+item replace entity @a[team=TMManSV.1Team2] armor.head with minecraft:leather_helmet{EigManSV.1Alle:true,display:{color:255},Enchantments:[{id:"binding_curse",lvl:1s}]}
 
 title @a[team=TMManSV.1Team1] title ["",{"text":"Mannschaft 1!","color":"red","bold":true}]
 title @a[team=TMManSV.1Team2] title ["",{"text":"Mannschaft 2!","color":"blue","bold":true}]

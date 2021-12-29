@@ -1,5 +1,5 @@
 
-execute at @e[type=minecraft:area_effect_cloud,tag=EtiSchMS.1Feld] run fill ~ ~ ~ ~2 ~1 ~2 minecraft:air replace
+execute at @e[type=minecraft:marker,tag=EtiSchMS.1Feld] run fill ~ ~ ~ ~2 ~1 ~2 minecraft:air replace
 
 execute as @e[tag=EtiSchMS.1Alle] at @s run teleport @s ~ -255 ~
 kill @e[tag=EtiSchMS.1Alle]

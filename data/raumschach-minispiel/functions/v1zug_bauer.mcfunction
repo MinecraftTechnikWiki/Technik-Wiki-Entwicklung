@@ -1,4 +1,4 @@
-#say bauer
+
 execute if entity @e[distance=..2,scores={PZRSchMS.1Spielz=0}] positioned ^ ^-1 ^5 if block ~ ~ ~ #raumschach-minispiel:v1schachbloecke unless entity @e[distance=..2,tag=EtiRSchMS.1Figur] positioned ^ ^ ^5 unless entity @e[distance=..2,tag=EtiRSchMS.1Figur] if block ~ ~ ~ #raumschach-minispiel:v1schachbloecke run function raumschach-minispiel:v1spielzug_anzeigen
 
 execute positioned ^ ^-1 ^5 if block ~ ~ ~ #raumschach-minispiel:v1schachbloecke unless entity @e[distance=..2,tag=EtiRSchMS.1Figur] run function raumschach-minispiel:v1spielzug_anzeigen

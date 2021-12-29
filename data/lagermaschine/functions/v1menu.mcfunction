@@ -33,28 +33,28 @@ data merge entity @e[distance=..2,type=minecraft:item,tag=EtiLagerM.1Drop,sort=n
 
 data remove entity @s[scores={PZLagerM.1Ausl=0}] Items[{Slot:15b}]
 
-replaceitem entity @s container.0 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.1 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.2 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.3 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.4 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.5 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.6 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.7 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.8 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.9 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.11 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.12 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.13 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.14 minecraft:red_concrete_powder{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":"Zurück","color":"red","bold":true}'} }
-replaceitem entity @s container.16 minecraft:lime_concrete_powder{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":"Weiter","color":"green","bold":true}'} }
-replaceitem entity @s container.17 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.18 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.19 minecraft:chest{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":"Einlagern und Abfrage","color":"gold","bold":true}'} }
-replaceitem entity @s container.20 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.21 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.22 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.23 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.24 minecraft:hopper{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":"Herausholen","color":"dark_purple","bold":true}'} }
-replaceitem entity @s container.25 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
-replaceitem entity @s container.26 minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.0 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.1 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.2 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.3 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.4 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.5 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.6 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.7 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.8 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.9 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.11 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.12 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.13 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.14 with minecraft:red_concrete_powder{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":"Zurück","color":"red","bold":true}'} }
+item replace entity @s container.16 with minecraft:lime_concrete_powder{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":"Weiter","color":"green","bold":true}'} }
+item replace entity @s container.17 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.18 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.19 with minecraft:chest{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":"Einlagern und Abfrage","color":"gold","bold":true}'} }
+item replace entity @s container.20 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.21 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.22 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.23 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.24 with minecraft:hopper{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":"Herausholen","color":"dark_purple","bold":true}'} }
+item replace entity @s container.25 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace entity @s container.26 with minecraft:black_stained_glass_pane{EigLagerM.1Alle:true,EigLagerM.1Menu:true,display:{Name:'{"text":""}'} }

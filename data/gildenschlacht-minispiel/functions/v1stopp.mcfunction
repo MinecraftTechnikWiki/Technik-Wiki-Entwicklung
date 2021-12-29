@@ -24,12 +24,12 @@ clear @a minecraft:red_bed{EigGildSMS.1Alle:true}
 
 gamemode creative @a[distance=..50,gamemode=adventure]
 
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run fill ~ ~ ~ ~26 ~27 ~26 minecraft:air
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run fill ~ ~ ~ ~-26 ~27 ~26 minecraft:air
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run fill ~ ~ ~ ~26 ~27 ~-26 minecraft:air
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] run fill ~ ~ ~ ~-26 ~27 ~-26 minecraft:air
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld] run fill ~ ~ ~ ~26 ~27 ~26 minecraft:air
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld] run fill ~ ~ ~ ~-26 ~27 ~26 minecraft:air
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld] run fill ~ ~ ~ ~26 ~27 ~-26 minecraft:air
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld] run fill ~ ~ ~ ~-26 ~27 ~-26 minecraft:air
 
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Vorhalle] run fill ~2 ~ ~2 ~-2 ~ ~-2 minecraft:air
+execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Wartehalle] run fill ~2 ~ ~2 ~-2 ~ ~-2 minecraft:air
 
-execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Spielfeld] positioned ~-25 ~ ~-25 run kill @e[dx=50,dy=50,dz=50,type=minecraft:item]
-kill @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Alle]
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld] positioned ~-25 ~ ~-25 run kill @e[dx=50,dy=50,dz=50,type=minecraft:item]
+kill @e[tag=EtiGildSMS.1Alle]

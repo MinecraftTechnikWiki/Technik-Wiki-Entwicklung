@@ -2,12 +2,12 @@
 fill ^-2 ^1 ^-1 ^2 ^8 ^32 minecraft:air replace #eisenbahn:v1drop-bloecke
 fill ^-2 ^1 ^-1 ^2 ^8 ^32 minecraft:air replace
 
-setblock ~ ~1 ~ minecraft:structure_block{mode:"LOAD",name:"eisenbahn:v1lok"} replace
+setblock ~ ~1 ~ minecraft:structure_block{mode:"LOAD",name:"eisenbahn:v1lok",posY:0} replace
 
-execute if entity @s[name="Osten"] run data merge block ~ ~1 ~ {posX:-28,posY:0,posZ:-2,rotation:"NONE"}
-execute if entity @s[name="Süden"] run data merge block ~ ~1 ~ {posX:2,posY:0,posZ:-28,rotation:"CLOCKWISE_90"}
-execute if entity @s[name="Westen"] run data merge block ~ ~1 ~ {posX:28,posY:0,posZ:2,rotation:"CLOCKWISE_180"}
-execute if entity @s[name="Norden"] run data merge block ~ ~1 ~ {posX:-2,posY:0,posZ:28,rotation:"COUNTERCLOCKWISE_90"}
+execute if entity @s[name="Osten"] run data merge block ~ ~1 ~ {posX:-28,posZ:-2,rotation:"NONE"}
+execute if entity @s[name="Süden"] run data merge block ~ ~1 ~ {posX:2,posZ:-28,rotation:"CLOCKWISE_90"}
+execute if entity @s[name="Westen"] run data merge block ~ ~1 ~ {posX:28,posZ:2,rotation:"CLOCKWISE_180"}
+execute if entity @s[name="Norden"] run data merge block ~ ~1 ~ {posX:-2,posZ:28,rotation:"COUNTERCLOCKWISE_90"}
 
 setblock ~ ~2 ~ minecraft:redstone_block replace
 

@@ -1,16 +1,16 @@
 
-execute as @e[type=minecraft:armor_stand,tag=EtiManSV.2Plattform] at @s store result score @s PZManSV.2Wert positioned ~-5 ~ ~-5 run tag @a[dx=10,dy=10,dz=10] add EtiManSV.2AufPlattform
+execute as @e[type=minecraft:marker,tag=EtiManSV.2Plattform] at @s store result score @s PZManSV.2Wert positioned ~-5 ~ ~-5 run tag @a[dx=9,dy=9,dz=9] add EtiManSV.2AufPlattform
 
 scoreboard players add VarManSV.2Tick PZManSV.2Wert 1
-execute if score VarManSV.2Tick PZManSV.2Wert matches 20.. if entity @e[type=minecraft:armor_stand,tag=EtiManSV.2Plattform,scores={PZManSV.2Wert=0}] run scoreboard players set VarManSV.2Zaehler PZManSV.2Wert 15
-execute if score VarManSV.2Tick PZManSV.2Wert matches 20.. if entity @e[type=minecraft:armor_stand,tag=EtiManSV.2Plattform,scores={PZManSV.2Wert=1..}] run scoreboard players remove VarManSV.2Zaehler PZManSV.2Wert 1
+execute if score VarManSV.2Tick PZManSV.2Wert matches 20.. if entity @e[type=minecraft:marker,tag=EtiManSV.2Plattform,scores={PZManSV.2Wert=0}] run scoreboard players set VarManSV.2Zaehler PZManSV.2Wert 15
+execute if score VarManSV.2Tick PZManSV.2Wert matches 20.. if entity @e[type=minecraft:marker,tag=EtiManSV.2Plattform,scores={PZManSV.2Wert=1..}] run scoreboard players remove VarManSV.2Zaehler PZManSV.2Wert 1
 execute if score VarManSV.2Tick PZManSV.2Wert matches 20.. run scoreboard players set VarManSV.2Tick PZManSV.2Wert 0
 
 title @a[tag=EtiManSV.2AufPlattform] actionbar ["",{"score":{"name":"VarManSV.2Zaehler","objective":"PZManSV.2Wert"},"color":"dark_purple","bold":true}]
 
-execute if score VarManSV.2Zaehler PZManSV.2Wert matches ..0 as @e[type=minecraft:armor_stand,tag=EtiManSV.2Plattform,scores={PZManSV.2Wert=1..}] at @s run function mannschaftsverteiler:v2mannschaft
+execute if score VarManSV.2Zaehler PZManSV.2Wert matches ..0 as @e[type=minecraft:marker,tag=EtiManSV.2Plattform,scores={PZManSV.2Wert=1..}] at @s run function mannschaftsverteiler:v2mannschaft
 
-replaceitem entity @a[tag=!EtiManSV.2AufPlattform,nbt={Inventory:[{Slot:103b,tag:{EigManSV.2Alle:true}}]}] armor.head minecraft:air
+item replace entity @a[tag=!EtiManSV.2AufPlattform,nbt={Inventory:[{Slot:103b,tag:{EigManSV.2Alle:true} } ] }] armor.head with minecraft:air
 tag @a[tag=EtiManSV.2AufPlattform] remove EtiManSV.2AufPlattform
 
 tag @a[nbt={SelectedItem:{tag:{EigManSV.2Stock:true} } }] add EtiManSV.2Ausgewaehlt
