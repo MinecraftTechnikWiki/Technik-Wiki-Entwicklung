@@ -1,0 +1,15 @@
+{
+  "values": [
+    "#minecraft:mineable/hoe",
+    "#minecraft:mineable/shovel",
+    "#minecraft:enderman_holdable",
+    "#minecraft:underwater_bonemeals",
+    "minecraft:cave_air",
+    "minecraft:tall_seagrass",
+    "minecraft:kelp",
+    "minecraft:kelp_plant",
+    "minecraft:bubble_column",
+    "minecraft:water",
+    "minecraft:lava"
+  ]
+}

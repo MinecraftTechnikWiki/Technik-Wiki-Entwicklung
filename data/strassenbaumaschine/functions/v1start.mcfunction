@@ -1,23 +1,16 @@
+# Es wird ein Punkte-Ziel für Werte und Auslöser erstellt.
+scoreboard objectives add PZStraBM.1Wert trigger ["Straßenbaumaschine.1: ",{"text":"Wert der Variablen","bold":true}]
 
-scoreboard objectives add PZStraB.1Schl minecraft.custom:minecraft.sneak_time ["Straßenbaumaschine.1: ",{"text":"Schleichzeit","bold":true}]
-scoreboard objectives add PZStraB.1Brenn dummy ["Straßenbaumaschine.1: ",{"text":"Brennstoff","bold":true}]
-scoreboard objectives add PZStraB.1Beton dummy ["Straßenbaumaschine.1: ",{"text":"Grauer Beton","bold":true}]
-scoreboard objectives add PZStraB.1Quarz dummy ["Straßenbaumaschine.1: ",{"text":"Glatter Quarzblock","bold":true}]
+# Spieler im Umkreis erhalten einen Rüstungsständer, den man platzieren kann um die Baumaschine zu erzeugen.
+give @a[distance=..15] minecraft:armor_stand{EigStraBM.1Alle:true,display:{Name:'{"text":"Straßenbaumaschine","color":"gold","bold":true}',Lore:['"Platziere den Rüstungsständer"','"um die Straßenbaumaschine zu erstellen"','"und um eine Angel zu erhalten"'] },EntityTag:{Small:true,Invisible:true,NoGravity:true,Tags:["EtiStraBM.1Alle","EtiStraBM.1Erstellen"] } } 16
 
-gamemode survival @a[distance=..25,gamemode=!survival]
+# Man erhält ein wenig von dem Material dass zum Bau der Spuren verwendet wird.
+give @a[distance=..15] minecraft:gray_concrete{EigStraBM.1Alle:true} 192
+give @a[distance=..15] minecraft:quartz_block{EigStraBM.1Alle:true} 128
+give @a[distance=..15] minecraft:stone_brick_slab{EigStraBM.1Alle:true} 256
 
-give @a[distance=..15] minecraft:hopper{strassenbaumaschine:"v1gegenstand",display:{Lore:['"Wirf den Gegenstand mit weiteren"','"auf den Boden, um daraus"','"beim richtigen Rezept die"','"Strassenbaumaschine zu erhalten"']} }
-give @a[distance=..15] minecraft:observer{strassenbaumaschine:"v1gegenstand",display:{Lore:['"Wirf den Gegenstand mit weiteren"','"auf den Boden, um daraus"','"beim richtigen Rezept die"','"Strassenbaumaschine zu erhalten"']} }
-give @a[distance=..15] minecraft:dispenser{strassenbaumaschine:"v1gegenstand",display:{Lore:['"Wirf den Gegenstand mit weiteren"','"auf den Boden, um daraus"','"beim richtigen Rezept die"','"Strassenbaumaschine zu erhalten"']} }
-give @a[distance=..15] minecraft:iron_ingot{strassenbaumaschine:"v1gegenstand",display:{Lore:['"Wirf den Gegenstand mit weiteren"','"auf den Boden, um daraus"','"beim richtigen Rezept die"','"Strassenbaumaschine zu erhalten"']} }
-give @a[distance=..15] minecraft:saddle{strassenbaumaschine:"v1gegenstand",display:{Lore:['"Wirf den Gegenstand mit weiteren"','"auf den Boden, um daraus"','"beim richtigen Rezept die"','"Strassenbaumaschine zu erhalten"']} }
-give @a[distance=..15] minecraft:diamond_pickaxe{strassenbaumaschine:"v1gegenstand",Enchantments:[{id:"minecraft:mending",lvl:1s}],display:{Lore:['"Wirf den Gegenstand mit weiteren"','"auf den Boden, um daraus"','"beim richtigen Rezept die"','"Strassenbaumaschine zu erhalten"']} }
-
-give @a[distance=..15] minecraft:coal{strassenbaumaschine:"v1gegenstand"} 64
-give @a[distance=..15] minecraft:gray_concrete{strassenbaumaschine:"v1gegenstand"} 192
-give @a[distance=..15] minecraft:smooth_quartz{strassenbaumaschine:"v1gegenstand"} 128
-
-tellraw @a[distance=..15] ["Straßenbaumaschine.1: ",{"text":"Wirf die Gegenstände auf den Boden um eine Straßenbaumaschine in Form eines Rüstungsständers zu erhalten. Den Rüstungsständer muss man platzieren und anschließend kann der Brennstoff durch das Auswählen von Kohle in der Schnelleiste und das Drücken von Shift aufgetankt werden. Ist die Straßenbaumaschine mit genug Brennstoff versorgt, wählt man das Schwert aus und Drückt ebenfalls Shift um die Länge der Straßenstrecke zu bestimmen.","bold":true}]
+# Eine kurze Anleitung, wie die Baumaschine aktiviert werden kann.
+tellraw @a[distance=..15] ["Straßenbaumaschine.1:\n",{"text":"Platziere den Rüstungsständer um die Straßenbaumaschine zu erzeugen. Setze dich in die Lore und steuere die Maschine durch das Auswählen der Angel. Um die Maschine zu löschen, wirf den Köder von der Angel auf diese.","bold":true}]
 
 # Der Chunk wird aktiviert.
 forceload add ~ ~

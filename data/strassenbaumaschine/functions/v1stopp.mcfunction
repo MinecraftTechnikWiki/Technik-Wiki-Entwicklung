@@ -1,27 +1,19 @@
+# Das Punkte-Ziel wird entfernt und somit alle Variablen und Werten in dessen Zusammenhang.
+scoreboard objectives remove PZStraBM.1Wert
 
-scoreboard objectives remove PZStraB.1Schl
-scoreboard objectives remove PZStraB.1Brenn
-scoreboard objectives remove PZStraB.1Beton
-scoreboard objectives remove PZStraB.1Quarz
+# Die verwendeten Gegenstände werden gelöscht.
+clear @a minecraft:fishing_rod{EigStraBM.1Alle:true}
+clear @a minecraft:armor_stand{EigStraBM.1Alle:true}
+clear @a minecraft:gray_concrete{EigStraBM.1Alle:true}
+clear @a minecraft:quartz_block{EigStraBM.1Alle:true}
+clear @a minecraft:stone_brick_slab{EigStraBM.1Alle:true}
 
-gamemode creative @a[distance=..25,gamemode=!creative]
+# Das noch eventuell vorhandene Etikett wird entfernt.
+tag @a[tag=EtiStraBM.1Auswahl] remove EtiStraBM.1Auswahl
 
-clear @a minecraft:hopper{strassenbaumaschine:"v1gegenstand"}
-clear @a minecraft:observer{strassenbaumaschine:"v1gegenstand"}
-clear @a minecraft:dispenser{strassenbaumaschine:"v1gegenstand"}
-clear @a minecraft:iron_ingot{strassenbaumaschine:"v1gegenstand"}
-clear @a minecraft:saddle{strassenbaumaschine:"v1gegenstand"}
-clear @a minecraft:diamond_pickaxe{strassenbaumaschine:"v1gegenstand"}
-
-clear @a minecraft:armor_stand{strassenbaumaschine:"v1gegenstand"}
-clear @a minecraft:wooden_sword{strassenbaumaschine:"v1gegenstand"}
-
-clear @a minecraft:coal{strassenbaumaschine:"v1gegenstand"}
-clear @a minecraft:gray_concrete{strassenbaumaschine:"v1gegenstand"}
-clear @a minecraft:smooth_quartz{strassenbaumaschine:"v1gegenstand"}
-
-tag @e[type=minecraft:item,nbt={strassenbaumaschine:"v1gegenstand"}] add EtiStraB.1Alle
-kill @e[tag=EtiStraB.1Alle]
+# Alle fallengelassenen Gegenstände und Objekte werden entfernt.
+tag @e[type=minecraft:item,nbt={Item:{tag:{EigStraBM.1Alle:true} } }] add EtiStraBM.1Alle
+kill @e[tag=EtiStraBM.1Alle]
 
 # Der Chunk wird deaktiviert.
 forceload remove ~ ~

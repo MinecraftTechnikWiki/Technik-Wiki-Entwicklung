@@ -6,7 +6,7 @@ execute as @e[type=minecraft:armor_stand,tag=EtiRakete.1Erstellen] at @s run fun
 scoreboard players remove VarRakete.1Zaehler PZRakete.1Wert 1
 execute if score VarRakete.1Zaehler PZRakete.1Wert matches ..-1 run scoreboard players set VarRakete.1Zaehler PZRakete.1Wert 20
 
-tag @a[nbt={RootVehicle:{Entity:{id:"minecraft:armor_stand",Tags:["EtiRakete.1Rakete"]} } }] add EtiRakete.1Sitzt
+tag @a[nbt={RootVehicle:{Entity:{Tags:["EtiRakete.1Rakete"]} } }] add EtiRakete.1Sitzt
 
 execute at @a[tag=EtiRakete.1Sitzt] run bossbar set rakete:v1zaehler players @a[distance=..50]
 

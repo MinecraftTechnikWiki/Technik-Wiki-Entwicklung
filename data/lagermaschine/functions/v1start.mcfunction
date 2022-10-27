@@ -1,8 +1,8 @@
 # Zwei Punkte-Ziele werden erstellt.
-scoreboard objectives add PZLagerM.1Stapel dummy ["Lagermaschine.1: ",{"text":"Droppen","bold":true}]
+#scoreboard objectives add PZLagerM.1Stapel dummy ["Lagermaschine.1: ",{"text":"Droppen","bold":true}]
 scoreboard objectives add PZLagerM.1Ausl trigger ["Lagermaschine.1: ",{"text":"Auslöser","bold":true}]
 
-# Ein NBT-Speicher wird angelegt.
+# Ein Datenspeicher wird angelegt.
 data merge storage lagermaschine:v1daten {EigLagerM.1Lager:[],EigLagerM.1Vergleich:""}
 
 # Spieler im Umkreis von 15 Blöcken, erhalten einen verzauberten Stock.
