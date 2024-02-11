@@ -1,4 +1,6 @@
 
+execute if entity @s[tag=EtiSchMS.1Mannschaft] run function schach-minispiel:v1spielzug_mannschaft
+
 execute if entity @e[tag=EtiSchMS.1BauerWandlung] run function schach-minispiel:v1spielzug_bauer
 
 data merge entity @s[tag=EtiSchMS.1KoenigAufgeben] {Health:30.0f}

@@ -32,4 +32,5 @@ execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld] run fill ~ ~ ~ ~-
 execute at @e[type=minecraft:armor_stand,tag=EtiGildSMS.1Wartehalle] run fill ~2 ~ ~2 ~-2 ~ ~-2 minecraft:air
 
 execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld] positioned ~-25 ~ ~-25 run kill @e[dx=50,dy=50,dz=50,type=minecraft:item]
+execute at @e[type=minecraft:marker,tag=EtiGildSMS.1Spielfeld] positioned ~-25 ~ ~-25 run kill @e[dx=50,dy=50,dz=50,type=minecraft:arrow]
 kill @e[tag=EtiGildSMS.1Alle]

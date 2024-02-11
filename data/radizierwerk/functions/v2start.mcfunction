@@ -1,3 +1,4 @@
+
 scoreboard objectives add PZRadiW.2Wert trigger ["Radizierwerk.2: ",{"text":"Wert der Variablen","bold":true}]
 
 scoreboard players set VarRadiW.2Variable1 PZRadiW.2Wert 1

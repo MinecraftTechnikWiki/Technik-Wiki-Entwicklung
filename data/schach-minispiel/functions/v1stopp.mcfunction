@@ -4,8 +4,13 @@ scoreboard objectives remove PZSchMS.1Farbe
 scoreboard objectives remove PZSchMS.1Spielz
 scoreboard objectives remove PZSchMS.1Punkte
 
-data remove storage schach-minispiel:v1werte "EigSchMS.1Variante"
-data remove storage schach-minispiel:v1werte "EigSchMS.1Horde"
+team remove TMSchMS.1Weiss
+team remove TMSchMS.1Tuerkis
+team remove TMSchMS.1Schwarz
+team remove TMSchMS.1Orange
+
+data remove storage schach-minispiel:v1daten "EigSchMS.1Variante"
+data remove storage schach-minispiel:v1daten "EigSchMS.1Horde"
 
 clear @a minecraft:armor_stand{EigSchMS.1Alle:true}
 

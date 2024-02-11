@@ -30,8 +30,8 @@ execute if score VarSchMS.1Modelle PZSchMS.1Brett matches 1 run item replace ent
 execute if score VarSchMS.1Modelle PZSchMS.1Brett matches 1 run item replace entity @e[tag=EtiSchMS.1Dame,tag=EtiSchMS.1Anklickbar] armor.head with minecraft:leather_chestplate{Unbreakable:true,Damage:5,display:{color:16383998}}
 execute if score VarSchMS.1Modelle PZSchMS.1Brett matches 1 run item replace entity @e[tag=EtiSchMS.1Koenig,tag=EtiSchMS.1Anklickbar] armor.head with minecraft:leather_chestplate{Unbreakable:true,Damage:6,display:{color:16383998}}
 
-execute as @e[tag=EtiSchMS.1Farbe,scores={PZSchMS.1Farbe=1}] store result entity @s ArmorItems[].tag.display.color int 1 run scoreboard players get KonstSchMS.1TUERKIS PZSchMS.1Farbe
-execute as @e[tag=EtiSchMS.1Farbe,scores={PZSchMS.1Farbe=2}] store result entity @s ArmorItems[].tag.display.color int 1 run scoreboard players get KonstSchMS.1SCHWARZ PZSchMS.1Farbe
-execute as @e[tag=EtiSchMS.1Farbe,scores={PZSchMS.1Farbe=3}] store result entity @s ArmorItems[].tag.display.color int 1 run scoreboard players get KonstSchMS.1ORANGE PZSchMS.1Farbe
+execute as @e[tag=EtiSchMS.1Farbe,scores={PZSchMS.1Farbe=1}] store result entity @s ArmorItems[].tag.display.color int 1 store result entity @s ArmorItem.tag.display.color int 1 run scoreboard players get KonstSchMS.1TUERKIS PZSchMS.1Farbe
+execute as @e[tag=EtiSchMS.1Farbe,scores={PZSchMS.1Farbe=2}] store result entity @s ArmorItems[].tag.display.color int 1 store result entity @s ArmorItem.tag.display.color int 1 run scoreboard players get KonstSchMS.1SCHWARZ PZSchMS.1Farbe
+execute as @e[tag=EtiSchMS.1Farbe,scores={PZSchMS.1Farbe=3}] store result entity @s ArmorItems[].tag.display.color int 1 store result entity @s ArmorItem.tag.display.color int 1 run scoreboard players get KonstSchMS.1ORANGE PZSchMS.1Farbe
 
 scoreboard players set @e[tag=EtiSchMS.1Anklickbar] PZSchMS.1Spielz 0

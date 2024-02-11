@@ -22,4 +22,4 @@ execute at @e[tag=EtiSchMS.1ZugAuswahl,tag=EtiSchMS.1Leuchten] if score @e[dista
 
 tag @e[tag=EtiSchMS.1Alle,tag=EtiSchMS.1MoeglicherZug] remove EtiSchMS.1MoeglicherZug
 
-execute as @e[tag=EtiSchMS.1Alle,tag=EtiSchMS.1Leuchten] run data modify entity @s ActiveEffects append value {Id:24b,Amplifier:127b,ShowParticles:false,Duration:2147483647}
+effect give @e[tag=EtiSchMS.1Alle,tag=EtiSchMS.1Leuchten] minecraft:glowing infinite 127 true

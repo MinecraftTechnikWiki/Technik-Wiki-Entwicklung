@@ -1,8 +1,8 @@
 {
 	"replace": false,
 	"values": [
-    "minecraft:iron_bars",
+    	"minecraft:iron_bars",
 		"#minecraft:fences",
-    "#minecraft:walls"
+    	"#minecraft:walls"
 	]
 }

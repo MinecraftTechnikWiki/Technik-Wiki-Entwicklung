@@ -1,7 +1,7 @@
 
 tag @a[nbt={SelectedItem:{tag:{EigSchadS.1Sensor:true} } }] add EtiSchadS.1Ausgewaehlt
 
-execute as @a[tag=EtiSchadS.1Ausgewaehlt] run title @s actionbar ["",{"text":"schaden == ","bold":true},{"score":{"name":"@s","objective":"PZSchadS.1Ver"},"color":"dark_purple","bold":true},";",{"score":{"name":"@s","objective":"PZSchadS.1Erl"},"color":"dark_purple","bold":true}]
+execute as @a[tag=EtiSchadS.1Ausgewaehlt] run title @s actionbar ["",{"text":"schaden == ","bold":true},{"score":{"name":"@s","objective":"PZSchadS.1Ver"},"color":"green","bold":true},{"text":" / ","bold":true},{"score":{"name":"@s","objective":"PZSchadS.1Erl"},"color":"red","bold":true}]
 
 title @a[tag=!EtiSchadS.1Ausgewaehlt,tag=EtiSchadS.1Auswahl] actionbar [""]
 

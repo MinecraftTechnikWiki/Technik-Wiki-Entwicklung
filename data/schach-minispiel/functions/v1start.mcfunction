@@ -14,7 +14,19 @@ scoreboard players set KonstSchMS.1HELLGRAU PZSchMS.1Farbe 7567221
 scoreboard players set VarSchMS.1Horde PZSchMS.1Brett 0
 scoreboard players set VarSchMS.1Variante PZSchMS.1Brett 0
 
-data merge storage schach-minispiel:v1werte {EigSchMS.1Variante:'{"text":"klassisches Schach","color":"blue","bold":true}',EigSchMS.1Horde:'{"text":"falsch","color":"red","bold":true}'}
+team add TMSchMS.1Weiss ["Schach-Minispiel.1: ",{"text":"Weiße Mannschaft","color":"white","bold":true}]
+team modify TMSchMS.1Weiss color white
+
+team add TMSchMS.1Tuerkis ["Schach-Minispiel.1: ",{"text":"Türkise Mannschaft","color":"blue","bold":true}]
+team modify TMSchMS.1Tuerkis color blue
+
+team add TMSchMS.1Schwarz ["Schach-Minispiel.1: ",{"text":"Schwarze Mannschaft","color":"black","bold":true}]
+team modify TMSchMS.1Schwarz color black
+
+team add TMSchMS.1Orange ["Schach-Minispiel.1: ",{"text":"Orange Mannschaft","color":"gold","bold":true}]
+team modify TMSchMS.1Orange color gold
+
+data merge storage schach-minispiel:v1daten {EigSchMS.1Variante:'{"text":"klassisches Schach","color":"blue","bold":true}',EigSchMS.1Horde:'{"text":"falsch","color":"red","bold":true}'}
 
 give @p[distance=..15] minecraft:armor_stand{EigSchMS.1Alle:true,EigSchMS.1Schach:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Schach","bold":true}',Lore:['"Platziere den Rüstungsständer"','"um ein Schachfeld zu"','"erzeugen"']},EntityTag:{Marker:true,Tags:["EtiSchMS.1Alle","EtiSchMS.1SchachbrettErstellen"] } }
 

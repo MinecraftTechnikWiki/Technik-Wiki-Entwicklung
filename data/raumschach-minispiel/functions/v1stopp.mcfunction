@@ -6,8 +6,8 @@ scoreboard objectives remove PZRSchMS.1Spielz
 scoreboard objectives remove PZRSchMS.1Zeile
 scoreboard objectives remove PZRSchMS.1Spalte
 
-data remove storage raumschach-minispiel:v1werte "EigRSchMS.1Variante"
-data remove storage raumschach-minispiel:v1werte "EigRSchMS.1Horde"
+data remove storage raumschach-minispiel:v1daten "EigRSchMS.1Variante"
+data remove storage raumschach-minispiel:v1daten "EigRSchMS.1Horde"
 
 clear @a minecraft:armor_stand{EigRSchMS.1Alle:true}
 

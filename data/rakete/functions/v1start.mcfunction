@@ -1,5 +1,6 @@
 
 scoreboard objectives add PZRakete.1Wert dummy ["Rakete.1: ",{"text":"Wert der Rakete","bold":true}]
+
 scoreboard players set KonstRakete.1ZWEI PZRakete.1Wert 2
 scoreboard players set VarRakete.1Zeit PZRakete.1Wert 0
 

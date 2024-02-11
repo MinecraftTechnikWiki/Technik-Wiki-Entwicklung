@@ -3,13 +3,13 @@ scoreboard objectives add PZFarBMi.1Leben dummy ["Farbball-Minispiel.1: ",{"text
 scoreboard objectives add PZFarBMi.1Wert dummy ["Farbball-Minispiel.1: ",{"text":"Zeit","bold":true}]
 scoreboard players set VarFarBMi.1Wartezeit PZFarBMi.1Wert -1
 
-team add TMFarBMi.1Rot ["Farbball-Minispiel.1: ",{"text":"rote Mannschaft","color":"red","bold":true}]
+team add TMFarBMi.1Rot ["Farbball-Minispiel.1: ",{"text":"Rote Mannschaft","color":"red","bold":true}]
 team modify TMFarBMi.1Rot color dark_red
 team modify TMFarBMi.1Rot friendlyFire false
 team modify TMFarBMi.1Rot nametagVisibility hideForOtherTeams
 team modify TMFarBMi.1Rot deathMessageVisibility never
 
-team add TMFarBMi.1Blau ["Farbball-Minispiel.1: ",{"text":"blaue Mannschaft","color":"blue","bold":true}]
+team add TMFarBMi.1Blau ["Farbball-Minispiel.1: ",{"text":"Blaue Mannschaft","color":"blue","bold":true}]
 team modify TMFarBMi.1Blau color dark_blue
 team modify TMFarBMi.1Blau friendlyFire false
 team modify TMFarBMi.1Blau nametagVisibility hideForOtherTeams

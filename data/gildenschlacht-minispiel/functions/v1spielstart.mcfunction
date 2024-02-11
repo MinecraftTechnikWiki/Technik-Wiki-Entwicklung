@@ -11,7 +11,7 @@ item replace entity @s[team=TMGildSMS.1Blau] armor.head with minecraft:leather_h
 
 give @s minecraft:iron_sword{EigGildSMS.1Alle:true}
 give @s minecraft:bow{EigGildSMS.1Alle:true}
-give @s minecraft:fishing_rod{EigGildSMS.1Alle:true}
+give @s minecraft:iron_axe{EigGildSMS.1Alle:true}
 give @s minecraft:cooked_beef{EigGildSMS.1Alle:true} 10
 give @s minecraft:golden_apple{EigGildSMS.1Alle:true}
 give @s minecraft:splash_potion{EigGildSMS.1Alle:true,Potion:"minecraft:healing"}
