@@ -3,16 +3,16 @@ scoreboard players set VarMADNMS.1Farbe PZMADNMS.1Team 0
 
 function marsch-raus-minispiel:v1spielfeld
 
-execute at @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Haus] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:true,NoBasePlate:true,DisabledSlots:4144959,Team:"TMMADNMS.1Rot",Tags:["EtiMADNMS.1Alle","EtiMADNMS.1Figur","EtiMADNMS.1Neu"],ArmorItems:[{id:"leather_boots",Count:1b},{id:"leather_leggings",Count:1b},{id:"leather_chestplate",Count:1b},{id:"leather_helmet",Count:1b}]}
+execute at @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Haus] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:true,NoBasePlate:true,DisabledSlots:4144959,Team:"TMMADNMS.1Rot",Tags:["EtiMADNMS.1Alle","EtiMADNMS.1Figur","EtiMADNMS.1Neu"],ArmorItems:[{id:"leather_boots",count:1},{id:"leather_leggings",count:1},{id:"leather_chestplate",count:1},{id:"leather_helmet",count:1}]}
 
 execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu] at @s run scoreboard players operation @s PZMADNMS.1Wert = @e[distance=..1,type=minecraft:armor_stand,tag=EtiMADNMS.1Haus,sort=nearest,limit=1] PZMADNMS.1Wert
 
 execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu] at @s run scoreboard players operation @s PZMADNMS.1Team = @e[distance=..1,type=minecraft:armor_stand,tag=EtiMADNMS.1Haus,sort=nearest,limit=1] PZMADNMS.1Team
 
-execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=1}] run data modify entity @s ArmorItems[].tag.display.color set value 16351261
-execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=2}] run data modify entity @s ArmorItems[].tag.display.color set value 3847130
-execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=3}] run data modify entity @s ArmorItems[].tag.display.color set value 8991416
-execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=4}] run data modify entity @s ArmorItems[].tag.display.color set value 8439583
+execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=1}] run data modify entity @s ArmorItems[].components.minecraft:dyed_color.rgb set value 16351261
+execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=2}] run data modify entity @s ArmorItems[].components.minecraft:dyed_color.rgb set value 3847130
+execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=3}] run data modify entity @s ArmorItems[].components.minecraft:dyed_color.rgb set value 8991416
+execute as @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=4}] run data modify entity @s ArmorItems[].components.minecraft:dyed_color.rgb set value 8439583
 
 team join TMMADNMS.1Blau @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=2}]
 team join TMMADNMS.1Gruen @e[type=minecraft:armor_stand,tag=EtiMADNMS.1Figur,tag=EtiMADNMS.1Neu,scores={PZMADNMS.1Team=3}]

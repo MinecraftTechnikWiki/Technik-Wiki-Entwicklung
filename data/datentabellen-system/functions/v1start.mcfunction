@@ -1,6 +1,5 @@
 
-give @a[distance=..15] minecraft:armor_stand{EigDaTaS.1Alle:true,display:{Name:'{"text":"Datentabelle","color":"green","bold":true}',Lore:['"Platziere den Rüstungsständer"','"um eine Datentabelle zu platzieren"']},EntityTag:{Small:true,Marker:true,Invisible:true,CustomNameVisible:true,CustomName:'{"text":"Datentabelle","color":"green","bold":true}',Tags:["EtiDaTaS.1Alle","EtiDaTaS.1Tabelle","EtiDaTaS.1Erstellen"]} }
-
+give @a[distance=..15] minecraft:armor_stand[minecraft:entity_data={CustomName:'{"text":"Datentabelle","color":"green","bold":true}',CustomNameVisible:true,Invisible:true,Marker:true,Small:true,Tags:["EtiDaTaS.1Alle","EtiDaTaS.1Tabelle","EtiDaTaS.1Erstellen"],id:"minecraft:armor_stand"},minecraft:lore=['"Platziere den Rüstungsständer"','"um eine Datentabelle zu platzieren"'],minecraft:custom_name='{"text":"Datentabelle","color":"green","bold":true}',minecraft:custom_data={EigDaTaS.1Alle:true}]
 
 
 

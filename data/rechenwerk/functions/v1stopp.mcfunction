@@ -5,8 +5,8 @@ data remove storage rechenwerk:v1daten "EigRechW.1Variable1"
 data remove storage rechenwerk:v1daten "EigRechW.1Variable2"
 data remove storage rechenwerk:v1daten "EigRechW.1Operator"
 
-clear @a minecraft:stick{EigRechW.1Alle:true}
+clear @a minecraft:stick[minecraft:custom_data~{EigRechW.1Alle:true}]
 
 tag @a[tag=EtiRechW.1Auswahl] remove EtiRechW.1Auswahl
 
-kill @e[type=minecraft:item,nbt={Item:{tag:{EigRechW.1Alle:true} } }]
+execute as @e[type=minecraft:item] if items entity @s contents *[minecraft:custom_data~{EigRechW.1Alle:true}] run kill @s

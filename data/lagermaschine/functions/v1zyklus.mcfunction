@@ -1,5 +1,5 @@
 # Wenn Spieler den Stock ausgewählt haben, erhalten sie ein Etikett.
-tag @a[nbt={SelectedItem:{tag:{EigLagerM.1Lager:true} } }] add EtiLagerM.1Ausgewaehlt
+execute as @a if items entity @s weapon.* *[minecraft:custom_data~{EigLagerM.1Lager:true}] run tag @s add EtiLagerM.1Ausgewaehlt
 
 # Wenn Spieler den Stock gerade erst ausgewählt haben, wird ihnen der Auslöser-Wert und die Position gesetzt.
 execute at @a[tag=EtiLagerM.1Ausgewaehlt,tag=!EtiLagerM.1Auswahl] run summon minecraft:chest_minecart ~ ~1 ~ {NoGravity:true,Invulnerable:true,CustomName:'{"text":"Lager","color":"dark_purple","bold":true}',Tags:["EtiLagerM.1Alle","EtiLagerM.1Menu"]}

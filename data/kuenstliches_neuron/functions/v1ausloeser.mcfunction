@@ -12,8 +12,8 @@
 
 ##
 #tag @e[type=minecraft:armor_stand,tag=EtiKNeur.1Ausloeser,tag=EtiKNeur.1Wert,sort=nearest,limit=1] add EtiKNeur.1Selbst
-#execute at @e[type=minecraft:armor_stand,tag=EtiKNeur.1Schild] run data merge block ~ ~ ~ {Text1:'{"score":{"name":"@e[type=minecraft:armor_stand,tag=EtiKNeur.1Selbst,sort=nearest,limit=1]","objective":"PZKNeur.1Wert"},"color":"dark_purple","bold":true}'}
-#execute at @e[type=minecraft:armor_stand,tag=EtiKNeur.1Schild] run data modify entity @e[type=minecraft:armor_stand,tag=EtiKNeur.1Selbst,sort=nearest,limit=1] CustomName set from block ~ ~ ~ Text1
+#execute at @e[type=minecraft:armor_stand,tag=EtiKNeur.1Schild] run data merge block ~ ~ ~ {front_text:{messages:['{"score":{"name":"@e[type=minecraft:armor_stand,tag=EtiKNeur.1Selbst,sort=nearest,limit=1]","objective":"PZKNeur.1Wert"},"color":"dark_purple","bold":true}','""','""','""']} }
+#execute at @e[type=minecraft:armor_stand,tag=EtiKNeur.1Schild] run data modify entity @e[type=minecraft:armor_stand,tag=EtiKNeur.1Selbst,sort=nearest,limit=1] CustomName set from block ~ ~ ~ front_text.messages[0]
 #tag @e[type=minecraft:armor_stand,tag=EtiKNeur.1Selbst,sort=nearest,limit=1] remove EtiKNeur.1Selbst
 ##
 

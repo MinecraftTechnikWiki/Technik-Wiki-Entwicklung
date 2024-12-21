@@ -5,7 +5,7 @@ execute as @e[type=minecraft:zombie,tag=EtiRSchMS.1Anklickbar,nbt=!{Health:20.0f
 
 execute as @e[type=minecraft:shulker,tag=EtiRSchMS.1ZugAuswahl,nbt=!{Health:30.0f}] at @s run function raumschach-minispiel:v1spielzug_hierher
 
-tag @a[nbt={SelectedItem:{tag:{EigRSchMS.1RaumSchach:true} } }] add EtiRSchMS.1Ausgewaehlt
+execute as @a if items entity @s weapon.* *[minecraft:custom_data~{EigRSchMS.1RaumSchach:true}] run tag @s add EtiRSchMS.1Ausgewaehlt
 
 scoreboard players set @a[tag=EtiRSchMS.1Ausgewaehlt,tag=!EtiRSchMS.1Auswahl] PZRSchMS.1Brett -99
 

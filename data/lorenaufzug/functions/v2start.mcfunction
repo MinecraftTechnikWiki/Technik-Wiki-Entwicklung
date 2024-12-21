@@ -17,7 +17,9 @@
 scoreboard objectives add PZLoAuf.2Wert dummy ["Lorenaufzug.2: ",{"text":"Zeit und Richtung","bold":true}]
 
 # Allen Spielern im Umkreis wird eine spezielle Lore gegeben, die man platzieren muss um die hohen Geschwindigkeiten zu erhalten.
-give @a[distance=..15] minecraft:minecart{EigLoAuf.2Alle:true,display:{Name:'{"text":"Lorenaufzug-Lore","color":"dark_purple","bold":true}',Lore:['"Platziere die Lore"','"auf die Schiene"','"und bewege sie mit WASD,"','"auf einen Aufzug zu."'] } }
+#give @a[distance=..15] minecraft:minecart{EigLoAuf.2Alle:true,display:{Name:'{"text":"Lorenaufzug-Lore","color":"dark_purple","bold":true}',Lore:['"Platziere die Lore"','"auf die Schiene"','"und bewege sie mit WASD,"','"auf einen Aufzug zu."'] } }
+
+give @a[distance=..15] minecraft:minecart[minecraft:lore=['"Platziere die Lore"','"auf die Schiene"','"und bewege sie mit WASD,"','"auf einen Aufzug zu."'],minecraft:custom_name='{"text":"Lorenaufzug-Lore","color":"dark_purple","bold":true}',minecraft:custom_data={EigLoAuf.2Alle:true}]
 
 # Damit man sich deutlich davon entfernen kann.
 forceload add ~ ~
@@ -33,7 +35,9 @@ forceload add ~ ~
 scoreboard objectives add PZLoAuf.1Wert dummy ["Lorenaufzug.1: ",{"text":"Zeit und Richtung","bold":true}]
 
 # Allen Spielern im Umkreis wird eine spezielle Lore gegeben, die man platzieren muss um die hohen Geschwindigkeiten zu erhalten.
-give @a[distance=..15] minecraft:minecart{EigLoAuf.1Alle:true,display:{Name:'{"text":"Lorenaufzug-Lore","color":"dark_purple","bold":true}',Lore:['"Platziere die Lore"','"auf die Schiene"','"und bewege sie mit WASD,"','"auf einen Aufzug zu."'] } }
+#give @a[distance=..15] minecraft:minecart{EigLoAuf.1Alle:true,display:{Name:'{"text":"Lorenaufzug-Lore","color":"dark_purple","bold":true}',Lore:['"Platziere die Lore"','"auf die Schiene"','"und bewege sie mit WASD,"','"auf einen Aufzug zu."'] } }
+
+give @a[distance=..15] minecraft:minecart[minecraft:lore=['"Platziere die Lore"','"auf die Schiene"','"und bewege sie mit WASD,"','"auf einen Aufzug zu."'],minecraft:custom_name='{"text":"Lorenaufzug-Lore","color":"dark_purple","bold":true}',minecraft:custom_data={EigLoAuf.1Alle:true}]
 
 # Damit man sich deutlich davon entfernen kann.
 forceload add ~ ~
@@ -80,11 +84,11 @@ execute if score VarLoAuf.1Tick PZLoAuf.1Wert matches 5.. run scoreboard players
 scoreboard objectives remove PZLoAuf.1Wert
 
 # Die Lore wird aus dem Inventar gelöscht, da sie beim Abbaue droppt und andere Eigenschaften besitzt, werden beide Varianten geprüft und gelöscht.
-clear @a minecraft:minecart{EigLoAuf.1Alle:true}
-clear @a minecraft:minecart{display:{Name:'{"bold":true,"color":"dark_purple","text":"Lorenaufzug-Lore"}'} }
+clear @a minecraft:minecart[minecraft:custom_data={EigLoAuf.1Alle:true}]
+clear @a minecraft:minecart[minecraft:custom_name='{"bold":true,"color":"dark_purple","text":"Lorenaufzug-Lore"}']
 
 # Falls die Lore gedroppt wurde, wird sie entfernt und die platzierte Lore ebenso.
-execute as @e[type=minecraft:item] unless entity @s[nbt=!{Item:{tag:{EigLoAuf.1Alle:true} } },nbt=!{Item:{tag:{display:{Name:'{"bold":true,"color":"dark_purple","text":"Lorenaufzug-Lore"}'} } } }] run kill @s
+execute as @e[type=minecraft:item] unless entity @s[nbt=!{Item:{components:{"minecraft:custom_data":{EigLoAuf.1Alle:true} } } },nbt=!{Item:{components:{"minecraft:custom_name":'{"bold":true,"color":"dark_purple","text":"Lorenaufzug-Lore"}'} } }] run kill @s
 execute as @e[tag=EtiLoAuf.1Alle] on vehicle run kill @s
 kill @e[tag=EtiLoAuf.1Alle]
 

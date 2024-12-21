@@ -5,11 +5,11 @@ scoreboard objectives add PZBuRezM.1Buend minecraft.used:minecraft.bundle ["Bün
 data merge storage buendel-rezeptmaschine:v1daten {EigBuRezM.1Buendel:[]}
 
 # Es werden die Rezept-Gegenstände ausgehändigt.
-give @a[distance=..15] minecraft:bundle{EigBuRezM.1Alle:true,EigBuRezM.1Buendel:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Bündel-Rezepte","bold":true}',Lore:['"Nutze das Bündel als Rezeptmaschine"'] } } 2
+give @a[distance=..15] minecraft:bundle[minecraft:lore=['"Nutze das Bündel als Rezeptmaschine"'],minecraft:custom_name='{"text":"Bündel-Rezepte","bold":true}',minecraft:custom_data={EigBuRezM.1Alle:true,EigBuRezM.1Buendel:true},minecraft:enchantment_glint_override=true] 2
 
-give @a[distance=..15] minecraft:stone{EigBuRezM.1Alle:true,display:{Lore:['"Wirf den Gegenstand mit Q"'] } } 2
-give @a[distance=..15] minecraft:cobblestone{EigBuRezM.1Alle:true,display:{Lore:['"Wirf den Gegenstand mit Q"'] } } 2
-give @a[distance=..15] minecraft:coal{EigBuRezM.1Alle:true,display:{Lore:['"Wirf den Gegenstand mit Q"'] } } 4
-give @a[distance=..15] minecraft:gold_ingot{EigBuRezM.1Alle:true,display:{Lore:['"Wirf den Gegenstand mit Q"'] } } 2
+give @a[distance=..15] minecraft:stone[minecraft:lore=['"Wirf den Gegenstand mit Q"'],minecraft:custom_data={EigBuRezM.1Alle:true}] 2
+give @a[distance=..15] minecraft:cobblestone[minecraft:lore=['"Wirf den Gegenstand mit Q"'],minecraft:custom_data={EigBuRezM.1Alle:true}] 2
+give @a[distance=..15] minecraft:coal[minecraft:lore=['"Wirf den Gegenstand mit Q"'],minecraft:custom_data={EigBuRezM.1Alle:true}] 4
+give @a[distance=..15] minecraft:gold_ingot[minecraft:lore=['"Wirf den Gegenstand mit Q"'],minecraft:custom_data={EigBuRezM.1Alle:true}] 2
 
 summon minecraft:item_frame ~ ~1 ~ {Invisible:false,Facing:1b,Tags:["EtiBuRezM.1Alle","EtiBuRezM.1Rahmen"]}

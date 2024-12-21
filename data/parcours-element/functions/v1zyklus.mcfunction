@@ -8,7 +8,7 @@ effect clear @a[tag=!EtiParEl.1Klettern,scores={PZParEl.1Klick=1..}] minecraft:l
 effect give @a[tag=EtiParEl.1Klettern] minecraft:levitation 1 1 true
 
 execute as @a[tag=EtiParEl.1Klettern] at @s run playsound minecraft:block.ladder.step master @s ~ ~ ~ 1 2 1
-execute at @a[tag=EtiParEl.1Klettern] run particle minecraft:block minecraft:ladder ^ ^1 ^0.4 0 0 0 0.1 10 force @a[distance=..15]
+execute at @a[tag=EtiParEl.1Klettern] run particle minecraft:block{block_state:{Name:"minecraft:ladder"} } ^ ^1 ^0.4 0 0 0 0.1 10 force @a[distance=..15]
 
 scoreboard players set @a[scores={PZParEl.1Klick=1..}] PZParEl.1Klick 0
 tag @a[tag=EtiParEl.1Klettern] remove EtiParEl.1Klettern

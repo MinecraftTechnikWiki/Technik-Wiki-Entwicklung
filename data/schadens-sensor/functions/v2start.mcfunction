@@ -9,14 +9,14 @@ attribute @s minecraft:generic.max_health get
 scoreboard objectives add PZSchadS.1Sch minecraft.custom:minecraft.damage_dealt ["Schadens-Sensor.2: ",{"text":"Schaden ausgeteilt","bold":true}]
 scoreboard objectives add PZSchadS.1Sch minecraft.custom:minecraft.damage_taken ["Schadens-Sensor.2: ",{"text":"Schaden erlitten","bold":true}]
 
-summon minecraft:falling_block ~ ~10 ~ {Time:0,Tags:["EtiSchadS.2Alle"],Passengers:[{id:"minecraft:armor_stand",Small:true,Invisible:true,Tags:["EtiSchadS.2Alle","EtiSchadS.2Zone","EtiSchadS.2Kugel"],ArmorItems:[{},{},{},{id:"minecraft:barrier",Count:1b} ] },{id:"minecraft:armor_stand",Small:true,Invisible:true,Tags:["EtiSchadS.2Alle","EtiSchadS.2Zone","EtiSchadS.2Kugel"],ArmorItems:[{},{},{},{id:"minecraft:barrier",Count:1b} ] },{id:"minecraft:armor_stand",Small:true,Invisible:true,Tags:["EtiSchadS.2Alle","EtiSchadS.2Zone","EtiSchadS.2Kubus"],ArmorItems:[{},{},{},{id:"minecraft:barrier",Count:1b} ] },{id:"minecraft:armor_stand",Small:true,Invisible:true,Tags:["EtiSchadS.2Alle","EtiSchadS.2Zone","EtiSchadS.2Kubus"],ArmorItems:[{},{},{},{id:"minecraft:barrier",Count:1b} ] } ] }
+summon minecraft:falling_block ~ ~10 ~ {Time:0,Tags:["EtiSchadS.2Alle"],Passengers:[{id:"minecraft:armor_stand",Small:true,Invisible:true,Tags:["EtiSchadS.2Alle","EtiSchadS.2Zone","EtiSchadS.2Kugel"],ArmorItems:[{},{},{},{id:"minecraft:barrier",count:1} ] },{id:"minecraft:armor_stand",Small:true,Invisible:true,Tags:["EtiSchadS.2Alle","EtiSchadS.2Zone","EtiSchadS.2Kugel"],ArmorItems:[{},{},{},{id:"minecraft:barrier",count:1} ] },{id:"minecraft:armor_stand",Small:true,Invisible:true,Tags:["EtiSchadS.2Alle","EtiSchadS.2Zone","EtiSchadS.2Kubus"],ArmorItems:[{},{},{},{id:"minecraft:barrier",count:1} ] },{id:"minecraft:armor_stand",Small:true,Invisible:true,Tags:["EtiSchadS.2Alle","EtiSchadS.2Zone","EtiSchadS.2Kubus"],ArmorItems:[{},{},{},{id:"minecraft:barrier",count:1} ] } ] }
 execute at @e[type=minecraft:falling_block,tag=EtiSchadS.2Alle] run spreadplayers ~ ~ 20 25 false @e[type=minecraft:armor_stand,tag=EtiSchadS.2Zone]
 
 execute at @e[type=minecraft:armor_stand,tag=EtiSchadS.2Zone] run summon minecraft:falling_block ~ ~ ~ {Time:0,Tags:["EtiSchadS.2Alle"],Passengers:[{id:"minecraft:villager",Tags:["EtiSchadS.2Alle"],Offers:{Recipes:[] } },{id:"minecraft:villager",Tags:["EtiSchadS.2Alle"],Offers:{Recipes:[] } },{id:"minecraft:villager",Tags:["EtiSchadS.2Alle"],Offers:{Recipes:[] } } ] }
 execute at @e[type=minecraft:armor_stand,tag=EtiSchadS.2Zone] run spreadplayers ~ ~ 5 10 false @e[type=minecraft:villager,tag=EtiSchadS.2Alle,sort=nearest,limit=3]
 
-give @a[distance=..25] minecraft:iron_sword{EigSchadS.2Alle:true,display:{Lore:['"Besiege mit dem Schwert"','"die Dorfbewohner um"','"deine Strafe zu erhalten"'] } }
-give @a[distance=..25] minecraft:tripwire_hook{EigSchadS.2Alle:true,display:{Name:'{"text":"Schlüssel","color":"gold","bold":true}',Lore:['"Wähle den Schlüssel aus,"','"um aus den Käfig-Zonen"','"zu entkommen"'] } }
+give @a[distance=..25] minecraft:iron_sword[minecraft:lore=['"Besiege mit dem Schwert"','"die Dorfbewohner um"','"deine Strafe zu erhalten"'],minecraft:custom_data={EigSchadS.2Alle:true}]
+give @a[distance=..25] minecraft:tripwire_hook[minecraft:lore=['"Wähle den Schlüssel aus,"','"um aus den Käfig-Zonen"','"zu entkommen"'],minecraft:custom_name='{"text":"Schlüssel","color":"gold","bold":true}',minecraft:custom_data={EigSchadS.2Alle:true}]
 
 
 
@@ -26,7 +26,7 @@ give @a[distance=..25] minecraft:tripwire_hook{EigSchadS.2Alle:true,display:{Nam
 
 
 
-execute at @e[type=minecraft:armor_stand,tag=EtiSchadS.2Zone] run tag @a[distance=..10,nbt={SelectedItem:{id:"minecraft:tripwire_hook",tag:{EigSchadS.2Alle:true} } }] add EtiSchadS.2Schluessel
+execute at @e[type=minecraft:armor_stand,tag=EtiSchadS.2Zone] run tag @a[distance=..10,nbt={SelectedItem:{id:"minecraft:tripwire_hook",components:{"minecraft:custom_data":{EigSchadS.2Alle:true} } } }] add EtiSchadS.2Schluessel
 
 scoreboard players set @a[tag=EtiSchadS.2Schluessel] PZSchadS.2Zeit 0
 scoreboard players set @a[tag=EtiSchadS.2Schluessel] PZSchadS.2Tote 0
@@ -78,8 +78,7 @@ scoreboard objectives remove PZSchadS.2Zeit
 tag @a[tag=EtiSchadS.2Gefangen] remove EtiSchadS.2Gefangen
 tag @a[tag=EtiSchadS.2InZone] remove EtiSchadS.2InZone
 
-clear @a minecraft:iron_sword{EigSchadS.2Alle:true}
-clear @a minecraft:tripwire_hook{EigSchadS.2Alle:true}
+clear @a *[minecraft:custom_data~{EigSchadS.2Alle:true}]
 
-tag @e[type=minecraft:item,nbt={Item:{tag:{EigSchadS.2Alle:true} } }] add EtiSchadS.2Alle
+execute as @e[type=minecraft:item] if items entity @s contents *[minecraft:custom_data~{EigSchadS.2Alle:true}] run kill @s
 kill @e[tag=EtiSchadS.2Alle]

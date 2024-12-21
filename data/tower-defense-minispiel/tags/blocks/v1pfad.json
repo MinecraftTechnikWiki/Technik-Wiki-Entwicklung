@@ -1,0 +1,17 @@
+{
+    "values": [
+      "minecraft:moss_block",
+      "minecraft:grass_block",
+      "minecraft:dirt",
+      "minecraft:coarse_dirt",
+      "minecraft:dirt_path",
+      "minecraft:spruce_planks",
+      "minecraft:spruce_stairs",
+      "minecraft:spruce_slab",
+      "minecraft:stone_bricks",
+      "minecraft:stone_brick_stairs",
+      "minecraft:stone_brick_slab",
+      "minecraft:deepslate_bricks"
+    ]
+}
+  

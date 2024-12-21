@@ -9,4 +9,4 @@ scoreboard players set VarRechW.1Variable2 PZRechW.1Ausl 0
 
 data merge storage rechenwerk:v1daten {EigRechW.1Felder:[0,0,0,0,0,0,0,0],EigRechW.1Operator:'{"text":"+","color":"blue","bold":true}'}
 
-give @a[distance=..15] minecraft:stick{EigRechW.1Alle:true,EigRechW.1Stock:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Rechenwerk","color":"dark_purple","bold":true}',Lore:['"Wähle den Stock aus"','"um die Einstellungs-"','"Optionen anzeigen zu lassen."'] } }
+give @a[distance=..15] minecraft:stick[minecraft:lore=['"Wähle den Stock aus"','"um die Einstellungs-"','"Optionen anzeigen zu lassen."'],minecraft:custom_name='{"text":"Rechenwerk","color":"dark_purple","bold":true}',minecraft:custom_data={EigRechW.1Alle:true,EigRechW.1Stock:true},minecraft:enchantment_glint_override=true]

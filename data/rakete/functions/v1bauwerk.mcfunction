@@ -1,9 +1,4 @@
 
-teleport @s[y_rotation=135..-135] ~ ~ ~ 180 0
-teleport @s[y_rotation=-135..-45] ~ ~ ~ -90 0
-teleport @s[y_rotation=-45..45] ~ ~ ~ 0 0
-teleport @s[y_rotation=45..135] ~ ~ ~ 90 0
-
 setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",name:"rakete:v1start_rampe",posY:0} replace
 
 # Je nach Himmelsrichtung wird der Konstruktionsblock mit entsprechenden Daten ausgestattet.

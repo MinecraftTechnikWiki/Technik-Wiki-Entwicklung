@@ -10,7 +10,7 @@ tag @a[tag=EtiZahlR.1Auswahl] remove EtiZahlR.1Auswahl
 tag @a[tag=EtiZahlR.1Zahl] remove EtiZahlR.1Zahl
 
 # Der Stock wird aus dem Inventar entfernt.
-clear @a minecraft:stick{EigZahlR.1Alle:true}
+clear @a minecraft:stick[minecraft:custom_data~{EigZahlR.1Alle:true}]
 
 # Falls der Stock auf den Boden geworfen wurde, wird ebenfalls entfernt.
-kill @e[type=minecraft:item,nbt={Item:{tag:{EigZahlR.1Alle:true} } }]
+execute as @e[type=minecraft:item] if items entity @s contents *[minecraft:custom_data~{EigZahlR.1Alle:true}] run kill @s

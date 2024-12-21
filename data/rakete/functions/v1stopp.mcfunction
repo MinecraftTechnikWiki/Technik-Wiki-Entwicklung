@@ -3,7 +3,7 @@ scoreboard objectives remove PZRakete.1Wert
 
 bossbar remove rakete:v1zaehler
 
-clear @a minecraft:armor_stand{EigRakete.1Alle:true}
+clear @a minecraft:armor_stand[minecraft:custom_data~{EigRakete.1Alle:true}]
 
-tag @e[type=minecraft:item,nbt={Item:{tag:{EigRakete.1Alle:true} } }] add EtiRakete.1Alle
+execute as @e[type=minecraft:item] if items entity @s contents *[minecraft:custom_data~{EigRakete.1Alle:true}] run kill @s
 kill @e[tag=EtiRakete.1Alle]

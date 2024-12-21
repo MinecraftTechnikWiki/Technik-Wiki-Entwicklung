@@ -1,5 +1,5 @@
 
-tag @a[nbt={SelectedItem:{tag:{EigMordS.2Sensor:true} } }] add EtiMordS.2Ausgewaehlt
+execute as @a if items entity @s weapon.* *[minecraft:custom_data~{EigMordS.2Sensor:true}] run tag @s add EtiMordS.2Ausgewaehlt
 
 execute as @a[tag=EtiMordS.2Ausgewaehlt] run title @s actionbar ["",{"text":"morde == ","bold":true},{"score":{"name":"@s","objective":"PZMordS.2Mord"},"color":"dark_purple","bold":true}]
 

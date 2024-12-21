@@ -1,5 +1,5 @@
 
-tag @a[nbt={SelectedItem:{tag:{EigSchadS.1Sensor:true} } }] add EtiSchadS.1Ausgewaehlt
+execute as @a if items entity @s weapon.* *[minecraft:custom_data~{EigSchadS.1Sensor:true}] run tag @s add EtiSchadS.1Ausgewaehlt
 
 execute as @a[tag=EtiSchadS.1Ausgewaehlt] run title @s actionbar ["",{"text":"schaden == ","bold":true},{"score":{"name":"@s","objective":"PZSchadS.1Ver"},"color":"green","bold":true},{"text":" / ","bold":true},{"score":{"name":"@s","objective":"PZSchadS.1Erl"},"color":"red","bold":true}]
 

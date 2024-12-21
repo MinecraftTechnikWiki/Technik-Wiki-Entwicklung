@@ -23,16 +23,16 @@ data modify storage zaubertisch-rezeptmaschine:v1daten "EigZaRezM.1ZauberSpeiche
 data modify storage zaubertisch-rezeptmaschine:v1daten "EigZaRezM.1ZauberSpeicher" append value {id:"minecraft:flame",lvl:1s}
 data modify storage zaubertisch-rezeptmaschine:v1daten "EigZaRezM.1ZauberSpeicher" append value {id:"minecraft:unbreaking",lvl:1s}
 
-give @a[distance=..15] minecraft:dropper{EigZaRezM.1Alle:true,display:{Lore:['"Platziere den Spender,"','"platziere den Rahmen darauf"','"und lege in diesen den Zaubertisch."']} } 1
-give @a[distance=..15] minecraft:item_frame{EigZaRezM.1Alle:true,display:{Lore:['"Platziere den Spender,"','"platziere den Rahmen darauf"','"und lege in diesen den Zaubertisch."']} } 1
-give @a[distance=..15] minecraft:enchanting_table{EigZaRezM.1Alle:true,display:{Lore:['"Platziere den Spender,"','"platziere den Rahmen darauf"','"und lege in diesen den Zaubertisch."']} } 1
+give @a[distance=..15] minecraft:dropper[minecraft:lore=['"Platziere den Spender,"','"platziere den Rahmen darauf"','"und lege in diesen den Zaubertisch."'],minecraft:custom_data={EigZaRezM.1Alle:true}] 1
+give @a[distance=..15] minecraft:item_frame[minecraft:lore=['"Platziere den Spender,"','"platziere den Rahmen darauf"','"und lege in diesen den Zaubertisch."'],minecraft:custom_data={EigZaRezM.1Alle:true}] 1
+give @a[distance=..15] minecraft:enchanting_table[minecraft:lore=['"Platziere den Spender,"','"platziere den Rahmen darauf"','"und lege in diesen den Zaubertisch."'],minecraft:custom_data={EigZaRezM.1Alle:true}] 1
 
-give @a[distance=..15] minecraft:diamond_sword{EigZaRezM.1Alle:true,display:{Lore:['"Rezept-Gegenstand"']} } 1
-give @a[distance=..15] minecraft:golden_pickaxe{EigZaRezM.1Alle:true,display:{Lore:['"Rezept-Gegenstand"']} } 1
-give @a[distance=..15] minecraft:netherite_hoe{EigZaRezM.1Alle:true,display:{Lore:['"Rezept-Gegenstand"']} } 1
+give @a[distance=..15] minecraft:diamond_sword[minecraft:lore=['"Rezept-Gegenstand"'],minecraft:custom_data={EigZaRezM.1Alle:true}] 1
+give @a[distance=..15] minecraft:golden_pickaxe[minecraft:lore=['"Rezept-Gegenstand"'],minecraft:custom_data={EigZaRezM.1Alle:true}] 1
+give @a[distance=..15] minecraft:netherite_hoe[minecraft:lore=['"Rezept-Gegenstand"'],minecraft:custom_data={EigZaRezM.1Alle:true}] 1
 
-give @a[distance=..15] minecraft:lapis_lazuli{EigZaRezM.1Alle:true,display:{Lore:['"Rezept-Gegenstand"']} } 64
+give @a[distance=..15] minecraft:lapis_lazuli[minecraft:lore=['"Rezept-Gegenstand"'],minecraft:custom_data={EigZaRezM.1Alle:true}] 64
 
-give @a[distance=..15] minecraft:enchanted_book{EigZaRezM.1Alle:true,display:{Lore:['"Rezept-Gegenstand"']},StoredEnchantments:[{id:"minecraft:protection",lvl:3s}]} 1
-give @a[distance=..15] minecraft:enchanted_book{EigZaRezM.1Alle:true,display:{Lore:['"Rezept-Gegenstand"']},StoredEnchantments:[{id:"minecraft:protection",lvl:3s},{id:"projectile_protection",lvl:3s}]} 1
-give @a[distance=..15] minecraft:enchanted_book{EigZaRezM.1Alle:true,display:{Lore:['"Rezept-Gegenstand"']},StoredEnchantments:[{id:"minecraft:protection",lvl:3s},{id:"projectile_protection",lvl:3s}]} 1
+give @a[distance=..15] minecraft:enchanted_book[minecraft:lore=['"Rezept-Gegenstand"'],minecraft:stored_enchantments={levels:{"minecraft:protection":3} },minecraft:custom_data={EigZaRezM.1Alle:true}] 1
+give @a[distance=..15] minecraft:enchanted_book[minecraft:lore=['"Rezept-Gegenstand"'],minecraft:stored_enchantments={levels:{"minecraft:protection":3,projectile_protection:3} },minecraft:custom_data={EigZaRezM.1Alle:true}] 1
+give @a[distance=..15] minecraft:enchanted_book[minecraft:lore=['"Rezept-Gegenstand"'],minecraft:stored_enchantments={levels:{"minecraft:protection":3,projectile_protection:3} },minecraft:custom_data={EigZaRezM.1Alle:true}] 1

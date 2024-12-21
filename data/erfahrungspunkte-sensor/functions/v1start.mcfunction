@@ -3,7 +3,7 @@
 scoreboard objectives add PZErfPS.1Wert dummy ["Erfahrungspunkte-Sensor.1: ",{"text":"Erfahrungspunkte","bold":true}]
 
 # Den Spielern im Umkreis von 15 Blöcken wird ein Kompass gegeben, mit dem sie die Erfahrungspunkte messen können.
-give @a[distance=..15] minecraft:compass{EigErfPS.1Alle:true,EigErfPS.1Sensor:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Erfahrungspunkte-Sensor","color":"dark_purple","bold":true}',Lore:['"Wähle den Kompass aus"','"um die Erfahrungspunkte"','"anzuzeigen zu lassen."'] } }
+give @a[distance=..15] minecraft:compass[minecraft:lore=['"Wähle den Kompass aus"','"um die Erfahrungspunkte"','"anzuzeigen zu lassen."'],minecraft:custom_name='{"text":"Erfahrungspunkte-Sensor","color":"dark_purple","bold":true}',minecraft:custom_data={EigErfPS.1Alle:true,EigErfPS.1Sensor:true},minecraft:enchantment_glint_override=true]
 
 # Der Chunk wird aktiv, damit der Sensor auch weit ab noch funktioniert.
 forceload add ~ ~
@@ -12,7 +12,7 @@ forceload add ~ ~
 
 
 # Wenn der Spieler den Kompass ausgewählt hat, erhält er zur Erkennung ein Etikett.
-tag @a[nbt={SelectedItem:{tag:{EigErfPS.1Sensor:true} } }] add EtiErfPS.1Ausgewaehlt
+execute as @a if items entity @s weapon.* *[minecraft:custom_data~{EigErfPS.1Sensor:true}] run tag @s add EtiErfPS.1Ausgewaehlt
 
 # Spieler die das Etikett besitzen laden von sich aus die Sensor-Funktion.
 execute as @a[tag=EtiErfPS.1Ausgewaehlt] run function erfahrungspunkte-sensor:v1sensor
@@ -65,10 +65,10 @@ scoreboard objectives remove PZErfPS.1Wert
 tag @a[tag=EtiErfPS.1Auswahl] remove EtiErfPS.1Auswahl
 
 # Der Kompass wird aus dem Inventar entfernt.
-clear @a minecraft:compass{EigErfPS.1Alle:true}
+clear @a minecraft:compass[minecraft:custom_data~{EigErfPS.1Alle:true}]
 
 # Falls der Kompass auf dem Boden geworfen wurde, wird der Drop entfernt.
-kill @e[type=minecraft:item,nbt={Item:{tag:{EigErfPS.1Alle:true} } }]
+execute as @e[type=minecraft:item] if items entity @s contents *[minecraft:custom_data~{EigErfPS.1Alle:true}] run kill @s
 
 # Der aktive Chunk wird wieder entladen.
 forceload remove ~ ~

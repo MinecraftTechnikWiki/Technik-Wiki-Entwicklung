@@ -1,7 +1,7 @@
 
 #execute as @e[type=minecraft:armor_stand,tag=EtiKNeur.1Erstellen] at @s run function kuenstliches_neuron:v1erstellen
 
-tag @a[nbt={SelectedItem:{tag:{EigKNeur.1Steuern:true} } }] add EtiKNeur.1Ausgewaehlt
+execute as @a if items entity @s weapon.* *[minecraft:custom_data~{EigKNeur.1Steuern:true}] run tag @s add EtiKNeur.1Ausgewaehlt
 
 #execute at @a[tag=EtiKNeur.1Ausgewaehlt] run effect give @e[type=minecraft:armor_stand,tag=EtiKNeur.1Eingangswert,tag=EtiKNeur.1Wert,sort=nearest,limit=1] minecraft:glowing 1 1 false
 #execute at @a[tag=EtiKNeur.1Ausgewaehlt] run effect give @e[type=minecraft:armor_stand,tag=EtiKNeur.1Schwellenwert,tag=EtiKNeur.1Bool,sort=nearest,limit=1] minecraft:glowing 1 1 true

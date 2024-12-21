@@ -1,7 +1,7 @@
 
 #execute if data storage rechenwerk:v1daten "EigRechW.1Variable1" as @a[distance=..25] unless entity @s[scores={PZRechW.1Ausl=0}] run function rechenwerk:v1ausloeser
 
-tag @a[nbt={SelectedItem:{tag:{EigRechW.1Stock:true} } }] add EtiRechW.1Ausgewaehlt
+execute as @a if items entity @s weapon.* *[minecraft:custom_data~{EigRechW.1Stock:true}] run tag @s add EtiRechW.1Ausgewaehlt
 
 scoreboard players set @a[tag=EtiRechW.1Ausgewaehlt,tag=!EtiRechW.1Auswahl] PZRechW.1Ausl -99
 

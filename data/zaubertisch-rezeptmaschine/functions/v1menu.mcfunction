@@ -1,18 +1,18 @@
 
-clear @a[distance=..5] #zaubertisch-rezeptmaschine:v1menu{EigZaRezM.1Menu:true}
-kill @e[distance=..2,type=minecraft:item,nbt={Item:{tag:{EigZaRezM.1Menu:true} } },sort=nearest]
+clear @a[distance=..5] *[minecraft:custom_data~{EigZaRezM.1Menu:true}]
+kill @e[distance=..2,type=minecraft:item,nbt={Item:{components:{"minecraft:custom_data":{EigZaRezM.1Menu:true} } } },sort=nearest]
 
-data remove block ~ ~ ~ Items[{tag:{EigZaRezM.1Menu:true} }]
+data remove block ~ ~ ~ Items[{components:{"minecraft:custom_data":{EigZaRezM.1Menu:true} } }]
 execute store result score VarZaRezM.1Slots PZZaRezM.1Wert run data get block ~ ~ ~ Items
 
-item replace block ~ ~ ~ container.3 with minecraft:black_stained_glass_pane{EigZaRezM.1Alle:true,EigZaRezM.1Menu:true,display:{Name:'{"text":""}'} }
-item replace block ~ ~ ~ container.4 with minecraft:black_stained_glass_pane{EigZaRezM.1Alle:true,EigZaRezM.1Menu:true,display:{Name:'{"text":""}'} }
-item replace block ~ ~ ~ container.6 with minecraft:black_stained_glass_pane{EigZaRezM.1Alle:true,EigZaRezM.1Menu:true,display:{Name:'{"text":""}'} }
-item replace block ~ ~ ~ container.7 with minecraft:black_stained_glass_pane{EigZaRezM.1Alle:true,EigZaRezM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace block ~ ~ ~ container.3 with minecraft:black_stained_glass_pane[minecraft:custom_name='{"text":""}',minecraft:custom_data={EigZaRezM.1Alle:true,EigZaRezM.1Menu:true}]
+item replace block ~ ~ ~ container.4 with minecraft:black_stained_glass_pane[minecraft:custom_name='{"text":""}',minecraft:custom_data={EigZaRezM.1Alle:true,EigZaRezM.1Menu:true}]
+item replace block ~ ~ ~ container.6 with minecraft:black_stained_glass_pane[minecraft:custom_name='{"text":""}',minecraft:custom_data={EigZaRezM.1Alle:true,EigZaRezM.1Menu:true}]
+item replace block ~ ~ ~ container.7 with minecraft:black_stained_glass_pane[minecraft:custom_name='{"text":""}',minecraft:custom_data={EigZaRezM.1Alle:true,EigZaRezM.1Menu:true}]
 
-item replace block ~ ~ ~ container.2 with minecraft:orange_stained_glass_pane{EigZaRezM.1Alle:true,EigZaRezM.1Menu:true,display:{Name:'{"text":""}'} }
-item replace block ~ ~ ~ container.5 with minecraft:orange_stained_glass_pane{EigZaRezM.1Alle:true,EigZaRezM.1Menu:true,display:{Name:'{"text":""}'} }
-item replace block ~ ~ ~ container.8 with minecraft:orange_stained_glass_pane{EigZaRezM.1Alle:true,EigZaRezM.1Menu:true,display:{Name:'{"text":""}'} }
+item replace block ~ ~ ~ container.2 with minecraft:orange_stained_glass_pane[minecraft:custom_name='{"text":""}',minecraft:custom_data={EigZaRezM.1Alle:true,EigZaRezM.1Menu:true}]
+item replace block ~ ~ ~ container.5 with minecraft:orange_stained_glass_pane[minecraft:custom_name='{"text":""}',minecraft:custom_data={EigZaRezM.1Alle:true,EigZaRezM.1Menu:true}]
+item replace block ~ ~ ~ container.8 with minecraft:orange_stained_glass_pane[minecraft:custom_name='{"text":""}',minecraft:custom_data={EigZaRezM.1Alle:true,EigZaRezM.1Menu:true}]
 
 
 execute if score VarZaRezM.1Slots PZZaRezM.1Wert matches 1.. if data block ~ ~ ~ Items[{Slot:0b}] run tag @s add EtiZaRezM.1Gegenstand

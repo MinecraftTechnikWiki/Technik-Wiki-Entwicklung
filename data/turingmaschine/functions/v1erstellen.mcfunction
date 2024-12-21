@@ -7,7 +7,7 @@ summon minecraft:armor_stand ~ ~ ~ {Small:true,Invisible:true,NoGravity:true,Cus
 
 summon minecraft:armor_stand ^ ^ ^1 {Small:true,Invisible:true,NoGravity:true,CustomNameVisible:true,CustomName:'{"text":"#","color":"gold","bold":true}',Tags:["EtiTuriM.1Alle","EtiTuriM.1Zeichen","EtiTuriM.1Bewegen"]}
 
-summon minecraft:armor_stand ^ ^2 ^1 {Small:true,Invisible:true,NoGravity:true,CustomNameVisible:true,CustomName:'{"text":"Bearbeiter","color":"gold","bold":true}',Tags:["EtiTuriM.1Alle","EtiTuriM.1LeseSchreibKopf"],ArmorItems:[{},{},{},{id:"minecraft:observer",Count:1b}]}
+summon minecraft:armor_stand ^ ^2 ^1 {Small:true,Invisible:true,NoGravity:true,CustomNameVisible:true,CustomName:'{"text":"Bearbeiter","color":"gold","bold":true}',Tags:["EtiTuriM.1Alle","EtiTuriM.1LeseSchreibKopf"],ArmorItems:[{},{},{},{id:"minecraft:observer",count:1}]}
 
 tag @s remove EtiTuriM.1Erstellen
 

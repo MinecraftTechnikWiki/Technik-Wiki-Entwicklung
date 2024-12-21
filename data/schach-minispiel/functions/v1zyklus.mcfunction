@@ -5,7 +5,7 @@ execute as @e[type=minecraft:zombie,tag=EtiSchMS.1Anklickbar,nbt=!{Health:20.0f}
 
 execute as @e[type=minecraft:shulker,tag=EtiSchMS.1ZugAuswahl,nbt=!{Health:30.0f}] at @s run function schach-minispiel:v1spielzug_hierher
 
-tag @a[nbt={SelectedItem:{tag:{EigSchMS.1Schach:true} } }] add EtiSchMS.1Ausgewaehlt
+execute as @a if items entity @s weapon.* *[minecraft:custom_data~{EigSchMS.1Schach:true}] run tag @s add EtiSchMS.1Ausgewaehlt
 
 scoreboard players set @a[tag=EtiSchMS.1Ausgewaehlt,tag=!EtiSchMS.1Auswahl] PZSchMS.1Brett -99
 

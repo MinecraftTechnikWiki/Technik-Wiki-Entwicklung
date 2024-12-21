@@ -1,10 +1,10 @@
 
-#execute store result score VarDrRezM.2Stapel PZDrRezM.2Drop run data get entity @s Item.Count
-#execute store result entity @s Item.Count byte 1 run scoreboard players remove VarDrRezM.2Stapel PZDrRezM.2Drop 1
+#execute store result score VarDrRezM.2Stapel PZDrRezM.2Drop run data get entity @s Item.count
+#execute store result entity @s Item.count byte 1 run scoreboard players remove VarDrRezM.2Stapel PZDrRezM.2Drop 1
 
 execute if entity @s[scores={PZDrRezM.2Fort=..0}] as @e[distance=..2,type=minecraft:item,tag=EtiDrRezM.2Drop,scores={PZDrRezM.2Drop=..-1},nbt={OnGround:true},sort=nearest,limit=1] run function drop-rezeptmaschine:v2brennstoff
 
-execute store result score VarDrRezM.2Brennen PZDrRezM.2Fort run data get entity @s Item.Count
+execute store result score VarDrRezM.2Brennen PZDrRezM.2Fort run data get entity @s Item.count
 
 execute if entity @s[scores={PZDrRezM.2Fort=1..}] as @e[distance=..2,type=minecraft:item,tag=EtiDrRezM.2Drop,scores={PZDrRezM.2Drop=1..},nbt={OnGround:true}] at @s run function drop-rezeptmaschine:v2material
 

@@ -15,13 +15,14 @@ spawnpoint @a[distance=..15] ~5 ~ ~ 0
 
 gamemode survival @a[distance=..15]
 
-give @a[distance=..15] minecraft:stick{EigMordS.2Alle:true,EigMordS.2Sensor:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Mord-Sensor","color":"dark_purple","bold":true}',Lore:['"Wähle den Stock aus"','"um die Morde"','"zu erfassen."'] } }
+give @a[distance=..15] minecraft:stick[minecraft:lore=['"Wähle den Stock aus"','"um die Morde"','"zu erfassen."'],minecraft:custom_name='{"text":"Mord-Sensor","color":"dark_purple","bold":true}',minecraft:custom_data={EigMordS.2Alle:true,EigMordS.2Sensor:true},minecraft:enchantment_glint_override=true]
 
-give @a[distance=..15] minecraft:iron_sword{EigMordS.2Alle:true,display:{Lore:['"Besiege mit dem Schwert"','"die Dorfbewohner um"','"deine Punktestände zu erhöhen"']},Enchantments:[{id:"minecraft:sharpness",lvl:5s}]} 1
+give @a[distance=..15] minecraft:iron_sword[minecraft:lore=['"Besiege mit dem Schwert"','"die Dorfbewohner um"','"deine Punktestände zu erhöhen"'],minecraft:enchantments={levels:{"minecraft:sharpness":5} },minecraft:custom_data={EigMordS.2Alle:true}] 1
 
-give @a[distance=..15] minecraft:vindicator_spawn_egg{EigMordS.2Alle:true,display:{Lore:['"Eine Kreatur zum"','"besiegen"']},EntityTag:{Tags:["EtiMordS.2Alle"],DeathLootTable:"minecraft:empty"} } 16
-give @a[distance=..15] minecraft:piglin_spawn_egg{EigMordS.2Alle:true,display:{Lore:['"Eine Kreatur zum"','"besiegen"']},EntityTag:{IsImmuneToZombification:true,Tags:["EtiMordS.2Alle"],DeathLootTable:"minecraft:empty"} } 16
+give @a[distance=..15] minecraft:vindicator_spawn_egg[minecraft:entity_data={DeathLootTable:"minecraft:empty",Tags:["EtiMordS.2Alle"],id:"minecraft:vindicator"},minecraft:lore=['"Eine Kreatur zum"','"besiegen"'],minecraft:custom_data={EigMordS.2Alle:true}] 16
 
-execute at @a[distance=..15] run summon minecraft:item ~-10 ~ ~ {Item:{id:"minecraft:egg",Count:1b},Age:6000s,Tags:["EtiMordS.2Alle","EtiMordS.2Mitte"],Passengers:[{id:"minecraft:vindicator",Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]},{id:"minecraft:vindicator",Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]},{id:"minecraft:vindicator",Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]},{id:"minecraft:piglin",IsImmuneToZombification:true,Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]},{id:"minecraft:piglin",IsImmuneToZombification:true,Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]}]}
+give @a[distance=..15] minecraft:piglin_spawn_egg[minecraft:entity_data={DeathLootTable:"minecraft:empty",IsImmuneToZombification:true,Tags:["EtiMordS.2Alle"],id:"minecraft:piglin"},minecraft:lore=['"Eine Kreatur zum"','"besiegen"'],minecraft:custom_data={EigMordS.2Alle:true}] 16
+
+execute at @a[distance=..15] run summon minecraft:item ~-10 ~ ~ {Item:{id:"minecraft:egg",count:1},Age:6000s,Tags:["EtiMordS.2Alle","EtiMordS.2Mitte"],Passengers:[{id:"minecraft:vindicator",Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]},{id:"minecraft:vindicator",Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]},{id:"minecraft:vindicator",Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]},{id:"minecraft:piglin",IsImmuneToZombification:true,Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]},{id:"minecraft:piglin",IsImmuneToZombification:true,Tags:["EtiMordS.2Alle","EtiMordS.2Objekt"]}]}
 
 execute at @e[type=minecraft:item,tag=EtiMordS.2Mitte] run spreadplayers ~ ~ 2 10 false @e[distance=..2,tag=EtiMordS.2Objekt,sort=nearest,limit=5]

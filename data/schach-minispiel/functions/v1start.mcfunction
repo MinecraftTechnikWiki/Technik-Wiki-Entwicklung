@@ -28,7 +28,7 @@ team modify TMSchMS.1Orange color gold
 
 data merge storage schach-minispiel:v1daten {EigSchMS.1Variante:'{"text":"klassisches Schach","color":"blue","bold":true}',EigSchMS.1Horde:'{"text":"falsch","color":"red","bold":true}'}
 
-give @p[distance=..15] minecraft:armor_stand{EigSchMS.1Alle:true,EigSchMS.1Schach:true,Enchantments:[{id:-1}],display:{Name:'{"text":"Schach","bold":true}',Lore:['"Platziere den Rüstungsständer"','"um ein Schachfeld zu"','"erzeugen"']},EntityTag:{Marker:true,Tags:["EtiSchMS.1Alle","EtiSchMS.1SchachbrettErstellen"] } }
+give @p[distance=..15] minecraft:armor_stand[minecraft:entity_data={Marker:true,Tags:["EtiSchMS.1Alle","EtiSchMS.1SchachbrettErstellen"],id:"minecraft:armor_stand"},minecraft:lore=['"Platziere den Rüstungsständer"','"um ein Schachfeld zu"','"erzeugen"'],minecraft:custom_name='{"text":"Schach","bold":true}',minecraft:custom_data={EigSchMS.1Alle:true,EigSchMS.1Schach:true},minecraft:enchantment_glint_override=true]
 
 forceload add ~ ~
 

@@ -5,7 +5,7 @@ scoreboard objectives add PZFreuS.1Spieler dummy ["Freunde-System.1: ",{"text":"
 
 data merge storage freunde-system:v1daten {EigFreuS.1AlleSpieler:[],EigFreuS.1Nummer:[]}
 
-give @a[distance=..15] stick{EigFreuS.1Alle:true}
+give @a[distance=..15] minecraft:stick[minecraft:custom_data={EigFreuS.1Alle:true}]
 
 
 
@@ -14,7 +14,7 @@ give @a[distance=..15] stick{EigFreuS.1Alle:true}
 
 execute as @a[tag=!EtiFreuS.1Spieler] at @s run function freunde-system:v1spieler
 
-tag @a[nbt={SelectedItem:{tag:{EigBiomS.1Sensor:true} } }] add EtiBiomS.1Ausgewaehlt
+execute as @a if items entity @s weapon.* *[minecraft:custom_data~{EigBiomS.1Sensor:true}] run tag @s add EtiBiomS.1Ausgewaehlt
 
 scoreboard players set @a[tag=EtiBiomS.1Ausgewaehlt,tag=!EtiBiomS.1Auswahl] PZFreuS.1Ausl -99
 
@@ -32,10 +32,10 @@ tag @a[tag=EtiBiomS.1Ausgewaehlt] remove EtiBiomS.1Ausgewaehlt
 
 
 summon minecraft:item_frame ~ ~ ~ {Tags:["EtiFreuS.1Alle","EtiFreuS.1Spielerkopf"]}
-loot replace entity @e[distance=..1,type=minecraft:item_frame,tag=EtiFreuS.1Spielerkopf,sort=nearest,limit=1] container.0 loot freunde-system:spieler
+loot replace entity @e[distance=..1,type=minecraft:item_frame,tag=EtiFreuS.1Spielerkopf,sort=nearest,limit=1] contents loot freunde-system:spieler
 
 data modify storage freunde-system:v1daten "EigFreuS.1AlleSpieler" append value {EigFreuS.1Nummer:0,EigFreuS.1Name:""}
-data modify storage freunde-system:v1daten "EigFreuS.1AlleSpieler"[-1]."EigFreuS.1Name" set from entity @e[distance=..1,type=minecraft:item_frame,tag=EtiFreuS.1Spielerkopf,sort=nearest,limit=1] Item.tag.SkullOwner.Name
+data modify storage freunde-system:v1daten "EigFreuS.1AlleSpieler"[-1]."EigFreuS.1Name" set from entity @e[distance=..1,type=minecraft:item_frame,tag=EtiFreuS.1Spielerkopf,sort=nearest,limit=1] Item.components.minecraft:profile.name
 
 execute store result storage freunde-system:v1daten "EigFreuS.1AlleSpieler"[-1]."EigFreuS.1Nummer" int 1 store result score @s PZFreuS.1Nr run scoreboard players add VarFreuS.1Nummer PZFreuS.1Nr 1
 
@@ -63,7 +63,7 @@ execute if entity @s[scores={PZFreuS.1Ausl=2}] run scoreboard players operation 
 execute if entity @s[scores={PZFreuS.1Ausl=2}] as @a if score @s PZFreuS.1Nr = VarFreuS.1Anfrage PZFreuS.1Spieler run tellraw @s ["Freunde-System.1:\n",{"text":"Der Spieler "},{"storage":"freunde-system:v1daten","nbt":"\"EigFreuS.1Anfrage\""},{"text":" hat dir eine Freundschaftsanfrage geschickt."}]
 
 
-tellraw @s ["Freunde-System.1:\n",{"text":"spieler (","bold":true},{"text":"=naechster()","color":"gray","bold":true,"underlined":true,"hoverEvent":{"action":"show_text","contents":{"text":"Tippe für nächsten Spieler"} },"clickEvent":{"action":"run_command","value":"/trigger PZFreuS.1Ausl set 1"} },{"text":",","bold":true},{"text":"=vorheriger()","color":"gray","bold":true,"underlined":true,"hoverEvent":{"action":"show_text","contents":{"text":"Tippe für vorherigen Spieler"} },"clickEvent":{"action":"run_command","value":"/trigger PZFreuS.1Ausl set -1"} },{"text":") == ","bold":true},{"storage":"freunde-system:v1daten","nbt":"\"EigFreuS.1AlleSpieler\"[0].\"EigFreuS.1Name\"","color":"gold","bold":true},"\n",{"text":"freund = ","bold":true},{"text":"anfrage()","color":"light_blue","bold":true,"underlined":true,"hoverEvent":{"action":"show_text","contents":{"text":"Tippe für Freundschaftsanfrage"} },"clickEvent":{"action":"run_command","value":"/trigger PZFreuS.1Ausl set 2"} }]
+#tellraw @s ["Freunde-System.1:\n",{"text":"spieler (","bold":true},{"text":"=naechster()","color":"gray","bold":true,"underlined":true,"hoverEvent":{"action":"show_text","contents":{"text":"Tippe für nächsten Spieler"} },"clickEvent":{"action":"run_command","value":"/trigger PZFreuS.1Ausl set 1"} },{"text":",","bold":true},{"text":"=vorheriger()","color":"gray","bold":true,"underlined":true,"hoverEvent":{"action":"show_text","contents":{"text":"Tippe für vorherigen Spieler"} },"clickEvent":{"action":"run_command","value":"/trigger PZFreuS.1Ausl set -1"} },{"text":") == ","bold":true},{"storage":"freunde-system:v1daten","nbt":"\"EigFreuS.1AlleSpieler\"[0].\"EigFreuS.1Name\"","color":"gold","bold":true},"\n",{"text":"freund = ","bold":true},{"text":"anfrage()","color":"light_blue","bold":true,"underlined":true,"hoverEvent":{"action":"show_text","contents":{"text":"Tippe für Freundschaftsanfrage"} },"clickEvent":{"action":"run_command","value":"/trigger PZFreuS.1Ausl set 2"} }]
 
 scoreboard players enable @s PZFreuS.1Ausl
 scoreboard players set @s PZFreuS.1Ausl 0
@@ -78,5 +78,3 @@ data remove storage freunde-system:v1daten "EigFreuS.1AlleSpieler"[0]
 execute store result score VarFreuS.1Spieler PZFreuS.1Nr run data get storage freunde-system:v1daten "EigFreuS.1AlleSpieler"[0]."EigFreuS.1Nummer"
 execute unless score @s PZFreuS.1Spieler = VarFreuS.1Spieler PZFreuS.1Nr run function freunde-system:v1liste
 #data modify storage freunde-system:v1daten "EigFreuS.1Name"
-
-

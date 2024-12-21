@@ -120,7 +120,7 @@ execute if entity @s[tag=EtiLoAuf.2Fahren] on vehicle at @s run function lorenau
 
 #execute store result score @s PZLoAuf.2Wert run data get entity @s Motion[0] 100
 
-#tellraw @p ["x: ",{"score":{"name": "@s","objective": "PZLoAuf.2Wert"}},"\nmotion: ",{"entity":"@s","nbt":"Motion[0]"}]
+#tellraw @p ["x: ",{"score":{"name": "@s","objective": "PZLoAuf.2Wert"} },"\nmotion: ",{"entity":"@s","nbt":"Motion[0]"}]
 
 #execute if block ~1 ~ ~ #minecraft:rails run teleport @s[scores={PZLoAuf.2Wert=1..}] ~ ~ ~ 270 0
 #execute if block ~-1 ~ ~ #minecraft:rails run teleport @s[scores={PZLoAuf.2Wert=..-1}] ~ ~ ~ 90 0
@@ -133,7 +133,7 @@ execute if entity @s[tag=EtiLoAuf.2Fahren] on vehicle at @s run function lorenau
 
 #execute store result score @s PZLoAuf.2Wert run data get entity @s Motion[2] 100
 
-#tellraw @p ["z: ",{"score":{"name": "@s","objective": "PZLoAuf.2Wert"}},"\nmotion: ",{"entity":"@s","nbt":"Motion[2]"}]
+#tellraw @p ["z: ",{"score":{"name": "@s","objective": "PZLoAuf.2Wert"} },"\nmotion: ",{"entity":"@s","nbt":"Motion[2]"}]
 
 #execute if block ~ ~ ~1 #minecraft:rails run teleport @s[scores={PZLoAuf.2Wert=1..}] ~ ~ ~ 0 0
 #execute if block ~ ~ ~-1 #minecraft:rails run teleport @s[scores={PZLoAuf.2Wert=..-1}] ~ ~ ~ 180 0

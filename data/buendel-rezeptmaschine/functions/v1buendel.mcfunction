@@ -1,7 +1,7 @@
 
-data modify storage buendel-rezeptmaschine:v1daten "EigBuRezM.1Buendel" set from entity @s SelectedItem.tag.Items
+data modify storage buendel-rezeptmaschine:v1daten "EigBuRezM.1Buendel" set from entity @s SelectedItem.components.minecraft:bundle_contents
 
-#execute store success score VarBuRezM.1Rezept PZBuRezM.1Buend unless data storage buendel-rezeptmaschine:v1daten {EigBuRezM.1Buendel:[{tag:{EigBuRezM.1Rezept:true} } ] }
+#execute store success score VarBuRezM.1Rezept PZBuRezM.1Buend unless data storage buendel-rezeptmaschine:v1daten {EigBuRezM.1Buendel:[{components:{"minecraft:custom_data":{EigBuRezM.1Rezept:true} } } ] }
 #if score VarBuRezM.1Rezept PZBuRezM.1Buend matches 1 
 execute store success score VarBuRezM.1Rezept PZBuRezM.1Buend if data storage buendel-rezeptmaschine:v1daten {EigBuRezM.1Buendel:[{id:"minecraft:stone"},{id:"minecraft:cobblestone"}]}
 

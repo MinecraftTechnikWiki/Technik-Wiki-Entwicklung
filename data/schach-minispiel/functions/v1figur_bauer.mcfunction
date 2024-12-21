@@ -7,7 +7,7 @@ execute if score VarSchMS.1Rotation PZSchMS.1Brett matches 3 as @e[distance=..2,
 
 scoreboard players set @e[tag=EtiSchMS.1Bauer,tag=EtiSchMS.1Anklickbar,sort=nearest,limit=1] PZSchMS.1Punkte 1
 
-data merge entity @e[tag=EtiSchMS.1Bauer,tag=EtiSchMS.1Anklickbar,sort=nearest,limit=1] {CustomNameVisible:true,CustomName:'{"text":"♙","bold":true}',HandItems:[{},{id:"minecraft:iron_hoe",Count:1b}],ArmorItems:[{},{id:"minecraft:leather_leggings",Count:1b,tag:{Damage:1,Unbreakable:true,display:{color:16383998}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{Unbreakable:true,display:{color:16383998}}},{id:"minecraft:leather_helmet",Count:1b,tag:{Unbreakable:true,display:{color:16383998}}}]}
+data merge entity @e[tag=EtiSchMS.1Bauer,tag=EtiSchMS.1Anklickbar,sort=nearest,limit=1] {CustomNameVisible:true,CustomName:'{"text":"♙","bold":true}',HandItems:[{},{id:"minecraft:iron_hoe",count:1}],ArmorItems:[{},{id:"minecraft:leather_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":{rgb:16383998} } },{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":{rgb:16383998} } },{id:"minecraft:leather_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":{rgb:16383998} } }]}
 
 scoreboard players operation @e[distance=..3,tag=EtiSchMS.1Bauer,tag=EtiSchMS.1Farbe,sort=nearest,limit=2] PZSchMS.1Farbe = VarSchMS.1Farbe PZSchMS.1Farbe
 scoreboard players operation @e[distance=..3,tag=EtiSchMS.1Bauer,tag=EtiSchMS.1Farbe,sort=nearest,limit=2] PZSchMS.1Brett = VarSchMS.1Rotation PZSchMS.1Brett

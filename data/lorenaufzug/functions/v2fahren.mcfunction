@@ -57,7 +57,7 @@ execute if score VarLoAuf.2Fahren PZLoAuf.2Wert matches ..5 at @s if block ~ ~ ~
 
 #tag @s[tag=EtiLoAuf.2Hoch,scores={PZLoAuf.2Wert=1..4}] remove EtiLoAuf.2Hoch
 
-#tellraw @p ["jump: ",{"score":{"name": "@s","objective": "PZLoAuf.2Wert"}}]
+#tellraw @p ["jump: ",{"score":{"name": "@s","objective": "PZLoAuf.2Wert"} }]
 
 #scoreboard players set @s PZLoAuf.2Wert 0
 #execute at @s if block ^ ^ ^1 minecraft:ladder run scoreboard players set @s PZLoAuf.2Wert 2
