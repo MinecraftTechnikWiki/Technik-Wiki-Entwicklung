@@ -1,0 +1,2 @@
+
+summon minecraft:armor_stand ~ ~3 ~ {Invisible:true,NoGravity:true,Tags:["EtiRSchMS.1Alle","EtiRSchMS.1ZugAuswahl","EtiRSchMS.1BodenZugAuswahl"],Passengers:[{id:"minecraft:falling_block",NoGravity:true,Time:-2147483648,Tags:["EtiRSchMS.1Alle","EtiRSchMS.1ZugAuswahl"],BlockState:{Name:"minecraft:lime_concrete"} },{id:"minecraft:shulker",NoAI:true,Silent:true,Color:5b,DeathLootTable:"minecraft:empty",CustomNameVisible:true,CustomName:{text:"Spielzug",color:"green",bold:true},Tags:["EtiRSchMS.1Alle","EtiRSchMS.1ZugAuswahl","EtiRSchMS.1Leuchten"]}]}

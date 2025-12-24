@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "components": {
+            "minecraft:custom_data": {
+              "namespace": "wegfinder",
+              "item": "toggle_particles_item"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "wegfindungssystem:ui/v2toggle_particles"
+  }
+}

@@ -1,0 +1,23 @@
+
+#execute if score VarRSchMS.1Rotation PZRSchMS.1Brett matches 0 run 
+
+#execute if score VarRSchMS.1Rotation PZRSchMS.1Brett matches 1 run summon minecraft:sheep ~ ~ ~ {NoAI:true,Silent:true,PersistenceRequired:true,DeathLootTable:"minecraft:empty",Color:0b,Rotation:[90.0f,0.0f],Tags:["EtiRSchMS.1Alle","EtiRSchMS.1Figur","EtiRSchMS.1Bauer","EtiRSchMS.1FigurBoden","EtiRSchMS.1Farbe"],active_effects:[{id:"minecraft:resistance",amplifier:127b,show_particles:false,duration:-1}],Passengers:[{id:"minecraft:zombie",IsBaby:true,NoAI:true,Silent:true,PersistenceRequired:true,DeathLootTable:"minecraft:empty",Rotation:[90.0f,0.0f],Tags:["EtiRSchMS.1Alle","EtiRSchMS.1Figur","EtiRSchMS.1Anklickbar","EtiRSchMS.1Farbe","EtiRSchMS.1Bauer","EtiRSchMS.1BauerDoppelZug"]}]}
+
+#execute if score VarRSchMS.1Rotation PZRSchMS.1Brett matches 2 run summon minecraft:sheep ~ ~ ~ {NoAI:true,Silent:true,PersistenceRequired:true,DeathLootTable:"minecraft:empty",Color:0b,Rotation:[180.0f,0.0f],Tags:["EtiRSchMS.1Alle","EtiRSchMS.1Figur","EtiRSchMS.1Bauer","EtiRSchMS.1FigurBoden","EtiRSchMS.1Farbe"],active_effects:[{id:"minecraft:resistance",amplifier:127b,show_particles:false,duration:-1}],Passengers:[{id:"minecraft:zombie",IsBaby:true,NoAI:true,Silent:true,PersistenceRequired:true,DeathLootTable:"minecraft:empty",Rotation:[180.0f,0.0f],Tags:["EtiRSchMS.1Alle","EtiRSchMS.1Figur","EtiRSchMS.1Anklickbar","EtiRSchMS.1Farbe","EtiRSchMS.1Bauer","EtiRSchMS.1BauerDoppelZug"]}]}
+
+#execute if score VarRSchMS.1Rotation PZRSchMS.1Brett matches 3 run summon minecraft:sheep ~ ~ ~ {NoAI:true,Silent:true,PersistenceRequired:true,DeathLootTable:"minecraft:empty",Color:0b,Rotation:[270.0f,0.0f],Tags:["EtiRSchMS.1Alle","EtiRSchMS.1Figur","EtiRSchMS.1Bauer","EtiRSchMS.1FigurBoden","EtiRSchMS.1Farbe"],active_effects:[{id:"minecraft:resistance",amplifier:127b,show_particles:false,duration:-1}],Passengers:[{id:"minecraft:zombie",IsBaby:true,NoAI:true,Silent:true,PersistenceRequired:true,DeathLootTable:"minecraft:empty",Rotation:[270.0f,0.0f],Tags:["EtiRSchMS.1Alle","EtiRSchMS.1Figur","EtiRSchMS.1Anklickbar","EtiRSchMS.1Farbe","EtiRSchMS.1Bauer","EtiRSchMS.1BauerDoppelZug"]}]}
+
+summon minecraft:sheep ~ ~ ~ {NoAI:true,Silent:true,PersistenceRequired:true,DeathLootTable:"minecraft:empty",Color:0b,Rotation:[0.0f,0.0f],Tags:["EtiRSchMS.1Alle","EtiRSchMS.1Figur","EtiRSchMS.1Bauer","EtiRSchMS.1FigurBoden","EtiRSchMS.1Farbe"],active_effects:[{id:"minecraft:resistance",amplifier:127b,show_particles:false,duration:-1}],Passengers:[{id:"minecraft:armor_stand",Small:true,Invisible:true,Tags:["EtiRSchMS.1Alle","EtiRSchMS.1Figur","EtiRSchMS.1Bauer"]},{id:"minecraft:zombie",IsBaby:true,NoAI:true,Silent:true,PersistenceRequired:true,DeathLootTable:"minecraft:empty",Rotation:[0.0f,0.0f],Tags:["EtiRSchMS.1Alle","EtiRSchMS.1Figur","EtiRSchMS.1Anklickbar","EtiRSchMS.1Farbe","EtiRSchMS.1Bauer","EtiRSchMS.1BauerDoppelZug"]}]}
+
+execute if score VarRSchMS.1Rotation PZRSchMS.1Brett matches 1 as @e[distance=..2,tag=EtiRSchMS.1Bauer] at @s run teleport @s ~ ~ ~ 90 0
+execute if score VarRSchMS.1Rotation PZRSchMS.1Brett matches 2 as @e[distance=..2,tag=EtiRSchMS.1Bauer] at @s run teleport @s ~ ~ ~ 180 0
+execute if score VarRSchMS.1Rotation PZRSchMS.1Brett matches 3 as @e[distance=..2,tag=EtiRSchMS.1Bauer] at @s run teleport @s ~ ~ ~ 270 0
+
+data merge entity @n[tag=EtiRSchMS.1Bauer,tag=EtiRSchMS.1Anklickbar] {CustomNameVisible:true,CustomName:{text:"♙",bold:true},equipment:{offhand:{id:"minecraft:iron_hoe",count:1},legs:{id:"minecraft:leather_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16383998} },chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16383998} },head:{id:"minecraft:leather_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16383998} } } }
+
+scoreboard players operation @e[distance=..3,tag=EtiRSchMS.1Bauer,tag=EtiRSchMS.1Farbe,sort=nearest,limit=2] PZRSchMS.1Farbe = VarRSchMS.1Farbe PZRSchMS.1Farbe
+scoreboard players operation @e[distance=..3,tag=EtiRSchMS.1Bauer,tag=EtiRSchMS.1Farbe,sort=nearest,limit=2] PZRSchMS.1Brett = VarRSchMS.1Rotation PZRSchMS.1Brett
+
+data merge entity @n[distance=..3,tag=EtiRSchMS.1Bauer,tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=1}] {Color:9b}
+data merge entity @n[distance=..3,tag=EtiRSchMS.1Bauer,tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=2}] {Color:15b}
+data merge entity @n[distance=..3,tag=EtiRSchMS.1Bauer,tag=EtiRSchMS.1Farbe,scores={PZRSchMS.1Farbe=3}] {Color:1b}
